@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>
+            Basic I
+            </title>
+        </head>
+        <body>
+            <form action="/process" method="post">
+                    <h1>
+                        Registration Form
+                    </h1>
+                <div></div>
+                <label>First Name: * </label>
+                <input type = 'text' name = "first_name">
+                <div></div>
+                <h1></h1>
+                <label>Last Name: * </label>
+                <input type = 'text' name = "last_name">
+                <div></div>
+                <h1></h1>
+                <label>Email Address: * </label>
+                <input type = 'email' name = "Email_Ad">
+                <div></div>
+                <h1></h1>
+                <label>Password: * </label>
+                <input type = 'password' name = "password">
+                <div></div>
+                <h1></h1>
+                <label>Confirm Password: * </label>
+                <input type = 'password' name = "password">
+                <div></div>
+                <h1></h1>
+                <label>Date of Birth: * </label>
+                <input type = 'date' name = "dob">
+
+                <div></div>
+                <h1></h1>
+                <p>Gender Identity:</p>
+                <div></div>
+                <input type = 'radio' name = "font" value = "Female" id = "female">
+                <label for = "normal">Female</label>
+                <input type = 'radio' name = "font" value = "Male" id = "Male">
+                <label for = "normal">Male</label>
+                <input type = 'radio' name = "font" value = "NonBI" id = "NonBi">
+                <label for = "normal">Non-Binary</label>
+                <input type = 'radio' name = "font" value = "Nopref" id = "Nonpref">
+                <label for = "normal">I prefer not to answer</label>
+                <div></div>
+                <p>A short description about myself:</p>
+                <div></div>
+                <textarea name = "comment" cols="40" rows = "4"></textarea>
+                <div></div>
+                <h1></h1>
+                    <label for = "language">Favorite Language:</label>
+                <select name = "language:" id = "language">
+                    <option>C++</option>
+                    <option>Java</option>
+                    <option>Python</option>
+                    <option>HTML</option>
+                </select>
+                <div></div>
+                <h1></h1>
+                <input type = "checkbox" name = "offers" id = "offers" checked>
+                <label for="offers">I would like to recieve periodic email updates</label>
+                <div></div>
+                <h1></h1>
+                <input type = "submit" value = "Create Account">
+                <p>* Indicates a required field</p>
+            </form>
+        </body>
+    </html>
