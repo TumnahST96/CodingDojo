@@ -1,0 +1,13 @@
+ls -a
+cd git
+more git
+git status
+cd ...
+git add .
+git commit -m "made some changes"
+git log
+git push
+*
+rm
+rm *
+git pull
