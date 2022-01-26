@@ -1,0 +1,42 @@
+h1{
+    background-color: rgb(1, 6, 12);
+    color: aliceblue;
+}
+ h2{
+     background-color: blueviolet;
+     color: aliceblue;
+    text-align: center;
+    font-style: italic;
+}
+h3{
+    background-color: rgb(101, 168, 231);
+    color: aliceblue;
+   text-align:right;
+   text-decoration: underline;
+}
+/*
+#centerTamma{
+    
+    text-align: center;
+}
+.almond{
+    background-color: blanchedalmond;
+    padding: 5px;
+}
+td, th{
+    border-style: solid;
+    text-align: center;
+    pad: 10px;
+}
+.widen{
+    width: 300px;
+}
+table{
+    border-collapse: collapse;
+}
+#submit {
+    padding: 5px;
+    background-color: rgb(179, 194, 44);
+    border-radius: 10px;
+    border: none;
+} */
