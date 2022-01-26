@@ -1,0 +1,26 @@
+#container{
+    width: 900px;
+    height: 500px;
+    background-color: aqua;
+    display: inline-block;
+    vertical-align: top;
+
+}
+#side{
+    width: 200px;
+    height: 500px;
+    background-color: blueviolet;
+    display: inline-block;
+
+}
+
+.innerbox{
+    width: 120px;
+    height: 120px;
+    background-color: blue;
+    display: inline-block;
+    margin: 20px;
+    margin-top: 170px;
+    margin-left: 35px;
+    padding: 20px;
+}
