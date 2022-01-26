@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="darkSalmon">Batman</h1>
+    <!-- <img src="https://static.wikia.nocookie.net/marvel_dc/images/4/4b/Batman_Vol_3_86_Textless.jpg/revision/latest?cb=20200502132734" alt="batman profile pic"> -->
+    <div id="centerImg">
+        <img src="./images/profilePic.jpg" alt="Batman profile pic" width="400">
+    </div>
+    <h3 class="darkSalmon">Biography</h3>
+    <p>Real name: Bruce Wayne</p>
+    <p>Age: 25</p>
+    <p>Protector of Gotham</p>
+    <h3 class="darkSalmon">Interests:</h3>
+    <ul>
+        <li>Bats</li>
+        <li>C#?</li>
+        <li>Tech</li>
+        <li>Brooding</li>
+        <li>Expensive bat suits</li>
+        <li>Justice</li>
+        <li>Sunday walks with Alfred</li>
+    </ul>
+    <h3 class="darkSalmon">Movies with different Batmen(?)</h3>
+    <table>
+        <tr>
+            <th>Movie Title</th>
+            <th class="widen">Year</th>
+            <th>Actor for Batman</th>
+        </tr>
+        <tr>
+            <td><a href="https://www.imdb.com/title/tt1345836/" target="_blank">Dark Knight Rises</a></td>
+            <td class="widen">2012</td>
+            <td>Christian Bale</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.imdb.com/title/tt1877830/" target="_blank">The Batman (Vengeance?)</a></td>
+            <td class="widen">2022</td>
+            <td>Robert Pattinson</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.imdb.com/title/tt0112462/" target="_blank">Batman Forever</a></td>
+            <td class="widen">1995</td>
+            <td>Val Kilmer</td>
+        </tr>
+    </table>
+    <h3 class="darkSalmon">Send a Batsignal</h3>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone number:</label>
+            <input type="tel" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="question">Do you believe heroes are liable for injuries and damages incurred during the course of being saved?</label>
+            <br>
+            <label for="yes">Yes</label>
+            <input type="radio" name="question" value="yes">
+            <label for="no">No</label>
+            <input type="radio" name="question" value="no">
+        </div>
+        <div class="form-group">
+            <label for="villain">Who is your least favorite villain?</label>
+            <select name="villain">
+                <option value="Joker">Joker</option>
+                <option value="Penguin">Penguin</option>
+                <option value="Bane">Bane</option>
+                <option value="The Riddler">The Riddler</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subscribe">Would you like to subscribe to the latest bat news?</label>
+            <input type="checkbox" name="subscribe" checked>
+        </div>
+        <div class="form-group">
+            <input id="submit" type="submit" value="Submit">
+        </div>
+    </form>
+    <p class="darkSalmon">Thank you for your input!</p>
+</body>
+</html>

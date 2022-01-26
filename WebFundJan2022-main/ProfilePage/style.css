@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(253, 154, 143);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Centering method #1 */
+/* img {
+    display:block;
+    margin: auto;
+} */
+/* Centering method #2 */
+#centerImg {
+    text-align: center;
+}
+
+/* Classes and IDs */
+/* They are a way for us to add a specific tag to an item */
+
+/* If your style is only going to apply to a single item: use ID - reference it using # */
+
+/* If your style is going to apply to multiple items use class */
+
+.darkSalmon {
+    background-color: rgb(177, 101, 92);
+    padding: 10px;
+}
+
+/* Classes are useful when you have a consistent style you want to apply across multiple objects */
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border-style: solid;
+    padding: 8px;
+}
+
+.widen {
+    width: 90px;
+    text-align: center;
+}
+
+#submit {
+    padding: 15px;
+    background-color: lightblue;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}
