@@ -1,55 +1,46 @@
 * {
     font-family: 'Antonio', sans-serif;
-    color:rgb(221, 221, 240);
+    color:ghostwhite;
 }
+
 body {
-    background-color: white;
+    background-color: black;
     padding: 20px;
 }
 
-.nav{
-    background-color: black;
+.EntireClass{
+    
+    margin: 50px;
+    height: 400px;
+    width: 600px;
+    border: solid;
     display: flex;
-    justify-content: space-between;
 }
-.nav-links{
-    display: flex;
-    list-style-type: none;
-    /* justify-content: space-between; */
-    width: 400px;
-    height: 100%;
+.box{
+    
+    background-color: aqua;
+    height: 100px;
+    width: 600px;
+
+}
+img{
+    width: 80px;
+    border-radius: 85%;
+    margin-top: 50px;
+    margin-left: 45px;
+    
     
 }
-#manyButts{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    width: 300px;
-    align-items: center;
-}
-ul li{
-    opacity: .75;
-}
-ul li:hover{
-    opacity: 1;
-    color: yellow;
-}
-.btn{
-    width: 300px;
-    background-color: rgb(74, 89, 231);
-    border-color: ghostwhite;
-    text-align: center;
-    width: 150px;
-    border-radius: 5px; 
-}
-.TheBody{
-    margin: 5px 0px;
-    display: flex;
-    background-color: ghostwhite;
-    border: solid;
-}
-#blueBox{
-    background-color:aqua;
-    height: 200px;
+.box2{
+    position: absolute;
+    background-color: white;
+    height: 250px;
     width: 600px;
+
+}
+h2{
+    margin-left: 45px;
+    color: black;
+    margin-top: 300px;
+    z-index: 1;
 }
