@@ -1,0 +1,44 @@
+ *{
+    /* this is css reset. allows to not have auto margin and padding? */
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    margin: 25px;
+}
+#alert{
+    position: absolute;
+    left: 50px;
+    top: 200px;
+}
+.test{
+    position: relative;
+    top: 350px;
+}
+ .container{
+     background-color: bisque;
+    width: 1000px;
+    height: 1000px;
+    position: relative; 
+    margin-left: 50px;
+    /* nearest positioned ancestor is absolute. print itself from position of its ancestor. not from where it is*/
+   
+}
+
+.red, .purple{
+    display: inline-block;
+    margin-top: 10px;
+}
+.red{
+    position: relative;
+    background-color: red;
+    height: 250px;
+    width: 250px;
+    z-index: 2;
+    
+}
+.purple{
+    background-color: purple;
+    height: 250px;
+    width: 250px;
+} 

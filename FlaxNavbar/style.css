@@ -9,9 +9,9 @@ body {
 
 .nav{
     display: flex;
-    margin: 10px 0px;
     align-items: center;
     justify-content: space-between;
+    background-color: blueviolet;
 }
 .nav-links{
     display: flex;
