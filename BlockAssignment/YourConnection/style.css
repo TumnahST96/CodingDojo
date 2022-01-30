@@ -1,0 +1,60 @@
+* {
+    font-family: 'Antonio', sans-serif;
+    color:rgb(221, 221, 240);
+}
+body {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    height: 300px;
+}
+.request{
+    display: flex;
+    height: 35px;
+    background-color: black;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.request img{
+    border-radius: 50%;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    
+ }
+#user1{
+    display: flex;
+    justify-content: space-between;
+    
+}
+#user1 img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: black;
+}
+#user1 p{
+    
+    color: black;
+}
+
+
+#user2{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#one img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: black;
+}
+#user2 p{
+    
+    color: black;
+}
+
+
+
