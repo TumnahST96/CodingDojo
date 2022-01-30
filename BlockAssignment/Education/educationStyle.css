@@ -1,0 +1,29 @@
+* {
+    font-family: 'Antonio', sans-serif;
+    color:ghostwhite;
+    
+}
+
+body {
+    background-color: white;
+    padding: 20px;
+}
+.FirstBox{
+    background-color: black;
+    height: 25px;
+    width: 365px;
+    
+}
+.SecondBox{
+    height: 125px;
+}
+h3{
+    color: black;
+}
+#grey{
+    color: gray;
+    font-style: italic;
+}
+#blk{
+    color: black;
+}
