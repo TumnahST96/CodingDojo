@@ -12,7 +12,7 @@ body {
     display: flex;
     height: 35px;
     background-color: black;
-    text-align: center;
+    align-items: center;
 }
 .request img{
     border-radius: 50%;
@@ -21,22 +21,29 @@ body {
     height: 20px;
     
 }
-#user1{
+#user{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
 }
-#user1 img{
+#user img{
     height: 35px;
     width: 35px;
     border-radius: 50%;
     color: black;
 }
-#user1 p{
+#user #req{
+    height: 20px;
+    width: 20px;
+    
+    border-radius: 50%;
+}
+#user p{
     
     color: black;
 }
-
+/* 
 #user2{
     display: flex;
     justify-content: space-between;
@@ -59,4 +66,4 @@ body {
     border-radius: 50%;
 }
 
-
+ */
