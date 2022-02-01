@@ -224,7 +224,7 @@ h3{
 
 
 .YourConnection{
-    height: 350px;
+    /* height: 350px; */
     width: 250px;
     margin: 30px;
     background-color: white;
@@ -247,7 +247,9 @@ h3{
     
  }
 
-
+.showProf{
+    margin-bottom: 50px;
+}
 
 #user3{
     display: flex;
@@ -269,9 +271,8 @@ h3{
     color: black;
 }
 .lastbit{
-    justify-content: flex-end;
     padding: 5px;
-    border: solid;
+    border-top: solid;
 }
 
 .lastbit p{
