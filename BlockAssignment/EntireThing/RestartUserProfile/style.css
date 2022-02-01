@@ -6,56 +6,76 @@
     padding: 0;
 }
 body {
-    background-color: black;
-    padding: 20px;
+    background-color: white;
+    
 }
-
-.nav{
+.NavBar{
+    height: 50px;
+    width: 100%;
+    background-color: black;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-bew;
+    /* align-items: center; */
+}
+#Profile{
+    margin-left: 190px;
+    flex: 1;
+    background-color: green;
+}
+#Profile h1{
+    color: white;
+}
+.Buttons{
+    flex: 2;
     background-color: blueviolet;
 }
-.nav-links{
+.Buttons #miniButs{
     display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    width: 300px;
-    
-}
-#manyButts{
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-}
-.btn{
-    padding: 5px;
-    margin-left: 100px;
-    width: 300px;
-    background-color: black;
-    border-color: ghostwhite;
-    text-align: center;
-    width: 100px;
-    border-radius: 5px;
-}
-.left_side{
-    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.EntireCard{
-    height:300px ;
-    margin: 50px;
-    width: 500px;
+.search{
+    margin-right: 190px;
+    flex: 1;
+    background-color: purple;
+}
+.search .btn{
     border: solid;
-    justify-content: center;
-}
-.box{
-    
-    background-color: aqua;
-    /* height: 100px; */
-    width: 500px;
+    background-color: lightcoral;
+    margin: 10px;
 
 }
+
+
+
+
+
+
+
+.theBoxes{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ 
+.leftSide{
+    margin-left: 150px;
+    margin-top: 25px;
+    height: 800px;
+    width: 500px;
+    background-color: orange;
+}
+
+.ProfileCard{
+    
+    height: 400px;
+    width: 500px;
+    background-color: aqua;
+    margin-bottom: 50px;
+    
+}
+
+
 .box img{
     width: 80px;
     border-radius: 50%;
@@ -63,25 +83,16 @@ body {
     margin-left: 45px;
     height: 80px;
     object-fit: cover;
-    margin-bottom: 20px;
-       
-}
-.box2{
-    /* position: absolute; */
-    background-color: white;
-    width: 500px;
     
-
+    
 }
-.box2 h2{
-    margin-left: px;
+
+.EntireCard h2{
+    padding: 35px;
+    margin: 0px;
     color: black;
 }
-#SecondHalf{
-    display: flex;
-    padding: 5px;
-    margin-left: 10px;
-}
+
 .box2 img{
     padding: 5px;
     margin: 0px;
@@ -97,24 +108,38 @@ h3{
     color: black;
 
 }
-.lastPortion{
-    margin-left: 10px;
-}
 .lastPortion img, p{
     text-decoration: underline;
     display: flex;
 }
-
-/* 
-your connection * {
-    font-family: 'Antonio', sans-serif;
-    color:rgb(221, 221, 240);
-}
-body {
+.Education{
+    height: 200px;
+    width: 500px;
     background-color: white;
-    padding: 20px;
-    width: 200px;
-    height: 300px;
+}
+.Education #header{
+    height: 25px;
+    background-color: grey;
+    align-items: center;
+}
+.Education p{
+    color: black;
+    justify-content: space-between;
+}
+.rightSide{
+    margin-right: 150px;
+    margin-top: 25px;
+    height: 800px;
+    width: 500px;
+    background-color: red;
+}
+
+.ConnectionReq{
+    margin: 30px;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 250px;
+    background-color: white;
 }
 .request{
     display: flex;
@@ -151,32 +176,16 @@ body {
     
     color: black;
 }
-/* 
-#user2{
-    display: flex;
-    justify-content: space-between;
-    
+
+
+.YourConnection{
+    height: 350px;
+    width: 250px;
+    margin: 30px;
+    background-color: burlywood;
 }
 
-#one img{
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-}
-#user2 p{
-    
-    color: black;
-}
-#twoes img{
-    height: 25px;
-    width: 25px;
-    
-    border-radius: 50%;
-}
-
- your connection
- 
-.request{
+.request1{
     height: 35px;
     background-color: black;
     text-align: center;
@@ -184,7 +193,7 @@ body {
     align-items: center;
     display: flex;
 }
-.request img{
+.request1 img{
     border-radius: 50%;
     margin: 5px;
     width: 30px;
@@ -229,8 +238,8 @@ body {
 
 #user3{
     display: flex;
- /* justify-content: space-between; 
- align-items: center;
+ /* justify-content: space-between; */
+    align-items: center;
     
 }
 
@@ -250,5 +259,3 @@ body {
     color: blue;
 }
 
-
- */
