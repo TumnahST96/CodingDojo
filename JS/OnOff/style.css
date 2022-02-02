@@ -1,0 +1,13 @@
+.body{
+    background-color: burlywood;
+}
+
+.Butts{
+    display: flex;
+    justify-content: space-around;
+}
+#Bb{
+    width: 70px;
+    height: 70px;
+    border: solid;
+}

@@ -1,0 +1,171 @@
+* {
+    font-family: 'Antonio', sans-serif;
+    color:rgb(221, 221, 240);
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+    margin: 0%;
+    width: 800px;
+    height: 700px;
+    border: solid;
+    
+}
+
+.Dojo{
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 45px;
+    background-color: rgb(85, 83, 83);
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.Dojo h2{
+    float: left;
+    margin-left: 10px;
+}
+.Dojo input{
+    margin-left: 70px;
+    margin-top: 10px;
+    width: 350px;
+    padding: 5px;
+    border: solid;
+}
+.Dojo button{
+    margin-right: 10px;
+    margin: 10px;
+    float: right;
+    padding: 5px;
+    background-color: blue;
+    border: solid;
+    
+}
+.WholeBod{
+    display: flex;
+}
+
+
+.NinSkill{
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 450px;
+    background-color: violet;
+    /* display: inline-block; */
+}
+
+.NinSkill h2{
+    margin-top: 5px;
+    margin-left: 20px;
+    color: black;
+}
+.NinSkill .left{
+    float: left;
+}
+.NinSkill .right{
+    float: right;
+}
+.left #p1{
+    margin-left: 30px;
+    color: black;
+}
+.left p{
+    margin-top: 5px;
+    margin-left: 20px;
+    color: black;
+}
+.NinSkill right{
+    margin-right: 20px;
+    
+}
+.right p2{
+    margin-top: 60px;
+    margin-right: 70px;
+    color: black;
+}
+.right p{
+    margin-right: 70px;
+    color: black;
+}
+.NinSkill .likes{
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 25px;
+    width: 70px;
+    background-color: orange;
+}
+.NinProg{
+    margin-left: 50px;
+    height: 150px;
+    width: 450px;
+    background-color: palevioletred;
+}
+
+.NinProg h2{
+    margin-top: 5px;
+    margin-left: 20px;
+    color: black;
+}
+.NinProg .left{
+    float: left;
+}
+.NinProg .right{
+    float: right;
+}
+.left #p1{
+    margin-left: 30px;
+    color: black;
+}
+.left p{
+    margin-top: 5px;
+    margin-left: 20px;
+    color: black;
+}
+.NinProg .likes{
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 25px;
+    width: 70px;
+    background-color: orange;
+}
+
+.NinProg right{
+    margin-right: 20px;
+    
+}
+.right p2{
+    margin-top: 60px;
+    margin-right: 70px;
+    color: black;
+}
+.right p{
+    margin-right: 70px;
+    color: black;
+}
+
+
+
+.Definition{
+
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 150px;
+    width: 225px;
+    background-color: yellow;
+}
+.Definition h3{
+    margin: 10px;
+    color: black;
+    
+}
+.Definition #DefiBut{
+    margin: 10px;
+    border: solid;
+    height: 30px;
+    background-color: green;
+    width: 150px;
+    color: black;
+}
