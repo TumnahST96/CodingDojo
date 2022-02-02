@@ -1,0 +1,102 @@
+* {
+    font-family: 'Antonio', sans-serif;
+    color:rgb(221, 221, 240);
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+    margin: 0%;
+    width: 800px;
+    height: 700px;
+    border: solid;
+    
+}
+
+.network{
+    height: 30px;
+    width: 700px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: black;
+    color: white;
+}
+
+.boxes{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leftBox{
+    width: 225px;
+    height: 300px;
+    border: solid #555;
+    align-items: center;
+}
+.leftBox img{
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+.leftBox p{
+    text-decoration: underline;
+    color: blue;
+    margin-left: 55px;
+}
+.leftBox h3{
+    color: black;
+    margin-left: 55px;
+    margin-top: 25px;
+}
+/* .rightBox{
+    width: 450px;
+    height: 600px;
+    border: solid #555;
+} */
+
+.user{
+    margin-bottom: 5px;
+    height: 195px;
+    width: 450px;
+    border: solid #555;
+}
+.top{
+    /* display: inline-block; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.user h2{
+    margin-left: 25px;
+    color: black;
+    
+}
+.user #p1, #p2, #p3{
+    color: black;
+    
+}
+.top #like{
+    margin-right: 25px;
+    height: 30px;
+    width: 50px;
+    background-color: goldenrod;
+    box-shadow: 5px 5px #555;
+}
+
+.Bottom{
+    margin: 25px;
+    align-items: center;
+    color: black;
+}
+.Bottom p{
+    margin: 25px;
+    align-items: center;
+    color: black;
+}

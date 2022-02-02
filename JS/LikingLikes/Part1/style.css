@@ -1,0 +1,34 @@
+.body{
+    margin: 40px;
+}
+.Card{
+    
+    width: 500px;
+    height: 200px;
+    border: solid;
+    /* display: flex; */
+}
+.top{
+    /* display: inline-block; */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top h2{
+    margin-left: 25px;
+    
+}
+.top #like{
+    margin-right: 25px;
+    height: 30px;
+    width: 50px;
+    background-color: goldenrod;
+    box-shadow: 5px 5px #555;
+}
+
+.Bottom{
+    margin: 25px;
+    align-items: center;
+}

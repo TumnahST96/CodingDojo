@@ -1,0 +1,14 @@
+#FavAnimal{
+    height: 200px;
+    width: 400px;
+}
+
+.btn{
+    height: 30px;
+    width: 70px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 0%;
+    box-shadow: 4px 4px #222;
+}
