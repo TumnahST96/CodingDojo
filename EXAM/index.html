@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div id="navContent">
+            <div id="easyBay">
+                <div id="leaf">
+                    <img src="leaf.png" alt="a leaf">
+                </div>
+                <h3>EasyBay</h3>
+            </div>
+            <div id="search">
+                <input id="SearchIn" type="text" placeholder="Search for anything">
+            </div>
+            <div id="login">
+                <h3>Sign In</h3>
+                <img src="cart-dark.png" alt="a cart"
+                onclick="alert('Your cart is empty')">
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="Diffspecies">
+            <div id="Aeonium">
+                <h2>Aeonium</h2>
+            </div>
+            <div id="Andormischus">
+                <h2>Andormischus</h2>
+            </div>
+            <div id="Agave">
+                <h2>Agave</h2>
+            </div>
+            <div id="Aloe">
+                <h2>Aloe</h2>
+            </div>
+            <div id="Anacampseros">
+                <h2>Anacampseros</h2>
+            </div>
+            <div id="Aristaloe">
+                <h2>Aristaloe</h2>
+            </div>
+            <div id="more">
+                <h2>More...</h2>
+            </div>
+            
+        </div>
+        <div class="specialties">
+            <h1>Your Source for Serious Succulent Specialities</h1>
+        </div>
+        <div class="floatingImage">
+            <div class="left">
+                <div id="discover">
+                    <h2 >Discover succulent varieties one pot or rack at a time!</h2>
+                    <div class="theBottom">
+                        <h2>Discover </h2>
+                        <img src="arrow-light.png" alt="arrow">
+                    </div>
+                    
+                </div>
+                <div id="hover">
+                    <img src="succulents-1.jpg" alt="first picture"  onmouseover="addNewPic()" onmouseleave="backImg()" id="succu">
+                </div>
+            </div>
+            <div class="right">
+                <div class="ImgBox">
+                    <img src="aloe-m.jpg" alt="aloe">
+                </div>
+                <div class="letterBox">
+                    <h3 id="hh">Soothing aloe</h3>
+                    <img src="arrow-light.png" alt="arrow">
+                </div>
+            </div>
+            <div id="soothingAloe"></div>
+        </div>
+        <div class="lastbar">
+                <div class="picInfo">
+                    <img src="sempervivum-s.jpg" alt="flora">
+                     <p>Sempervivum</p>  
+                </div>
+                <div class="picInfo">
+                    <img src="sedum-s.jpg" alt="flora">
+                    <p>Sedum</p>
+                </div>
+                <div class="picInfo">
+                    <img src="echeveria-s.jpg" alt="flora">
+                    <p>Echeveria</p>
+                </div>
+                <div class="picInfo">
+                    <img src="aloe-m.jpg" alt="flora"> 
+                    <p>Aloe</p>
+                </div>
+                <div class="picInfo">
+                    <img src="aeonium-s.jpg" alt="flora">
+                    <p>Aeonium</p>
+                </div>
+                <div class="picInfo">
+                    <img src="cactus-s.jpg" alt="flora">
+                    <p>Cactus</p>
+                </div>
+    
+              
+        </div>
+    </div>
+    
+    <div class="cooki">
+        <img src="warning.png" alt="triangle">
+        <p>This site makes use of third-party cookies, by clicking "I accept" you agree to the terms outlined in our <a href="#">cookie policy.</a> </p>
+        <button class="butt" >I accept</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
