@@ -1,19 +1,10 @@
 
+function CookieRem(){
+    const cookieCon = document.querySelector(".cooki")
+   cookieCon.remove()  
+}
 
-// const cookieCon = document.querySelector(".cooki")
-// const cookieBut = document.querySelector(".butt")
 
-// cookieBut.addEventListener("click",() =>{
-//     cookieCon.classList.remove("active");
-//     localStorage.setItem("cookieBannerDisplayed", "true");
-
-// })
-// setTimeout(()=>{
-//     if (!localStorage.getItem("cookieBannerDisplayed")){
-//         cookieCon.classList.add("active");
-//     }
-   
-// },2000)
 
 
 function addNewPic(){
