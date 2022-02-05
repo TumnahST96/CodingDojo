@@ -7,7 +7,7 @@ var sandwich = {
     cheese: ["provolone", "pepperjack"], 
     display: function  (){
         // console.log("the bread is "+this.bread);
-        console.log("the bread is "+this.condiments);
+        // console.log("the bread is "+this.condiments);
     }
 
 }

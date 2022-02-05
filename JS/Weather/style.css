@@ -1,0 +1,28 @@
+
+.body{
+    display: flex;
+}
+.Navbar{
+    height: 50px;
+    width: 900px;
+    background-color: lightblue;
+}
+
+.cityName{
+    height: 50px;
+    width: 900px;
+    background-color: red;
+}
+
+
+.schdule{
+    height: 50px;
+    width: 900px;
+    background-color: orange;
+}
+
+.cookie{
+    height: 50px;
+    width: 900px;
+    background-color: green;
+}
