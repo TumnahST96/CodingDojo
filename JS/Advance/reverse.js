@@ -16,6 +16,7 @@ function firstLet(string) {
         st1 += words[i][0]
     }
     let st2 = " "
+    
     for (let i = 0; i < st1.length; i++) {
         if (st1[i] >= 'a' && st1[i] <= 'z')
             st2 += String.fromCharCode(st1.charCodeAt(i) - 32)

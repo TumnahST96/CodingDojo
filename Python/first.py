@@ -28,3 +28,8 @@ nahi.make_withdraw(500)
 nahi.make_withdraw(20)
 nahi.make_withdraw(50)
 nahi.display_user_balance()
+
+genie.make_withdraw(50)
+nahi.make_Deposit(50)
+genie.display_user_balance()
+nahi.display_user_balance()
