@@ -76,8 +76,11 @@ print(type(context))
 
 
 
-# for k in context['questions'][context]: not owkring
-#     # print(context[k])
-#     print(k)
+for k in context['questions'][context]:  
+    print(k)
+#     print(context[k])
+
+    # doens't work
+    
 
 

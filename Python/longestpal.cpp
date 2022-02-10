@@ -13,12 +13,14 @@ int fromMid(string str, int left, int right){
     return right-left-1;
 }
 
-String longest (string str){
-    if(str==null || str.length()<1) return "";
+
+
+string longest (string str){
+    if(str.length()<1) return "";
     int start = 0; 
     int end = 0; 
     for(int i = 0; i<str.length(); i++){
-        int len1 = fromMid(str, i, i);
+        int len1 = fromMid(str, i, i); 11211
         int len2 = fromMid(str, i, i+1);
         int len = max(len1, len2);
         if(len>end-start){
@@ -36,7 +38,7 @@ String longest (string str){
 }
 
 int main (){
-    string str = "racecar";
+    string str = longest("racecar");
     cout<<str<<endl;
 
 }
