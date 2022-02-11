@@ -7,11 +7,13 @@ class User:
     def say_hello(self):
         return "hello"
 
-# in the same file, add the following below the User class
-print(square(5))
-user = User("Anna")
-print(user.name)
-print(user.say_hello())
 
-print(__name__)
 
+class Parent:
+    def method_a(self):
+        print("invoking PARENT method_a!")
+
+
+
+
+#notice this overrides the Parent method!
