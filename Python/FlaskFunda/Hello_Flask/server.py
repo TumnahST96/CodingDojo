@@ -1,12 +1,13 @@
 from ast import Num
+import imp
 import re
-from flask import Flask  # Import Flask to allow us to create our app
+from flask import Flask, render_template  # Import Flask to allow us to create our app
 app = Flask(__name__)    # Create a new instance of the Flask class called "app"
 
 
-@app.route('/')
-def exper():
-    return "hey there"
+# @app.route('/')
+# def exper():
+#     return "hey there"
 
 @app.route('/Number/<int:num>')
 def printStuff(num):
@@ -17,10 +18,10 @@ def printStuff(num):
         print("BYE")
         return "bye"
 
-    else:
-        for i in num:
-            print("DOGS")
-            return "dogs"
+    # else:
+    #     for i in num:
+    #         print("DOGS")
+    #         return "dogs"
 
 
 
@@ -31,10 +32,15 @@ def show_user_profile(username, id):
     return "username: " + username + ", id: " + id
 
 
-@app.route('/dojo')
-def dojo():
+@app.route('/')
+def index():
     print("Dojo")
-    return 'Dojo printed'
+    return render_template("index.html")
+
+@app.route('/')
+def index():
+    print("Dojo")
+    return render_template("hello.html")
 
 
 @app.route('/hello/<name>')          # The "@" decorator associates this route with the function immediately following
