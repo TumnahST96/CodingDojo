@@ -76,8 +76,8 @@ print(type(context))
 
 
 
-for k in context['questions'][context]:  
-    print(k)
+# for k in context['questions'][context]:  
+#     print(k)
 #     print(context[k])
 
     # doens't work

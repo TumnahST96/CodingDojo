@@ -37,10 +37,6 @@ def index():
     print("Dojo")
     return render_template("index.html")
 
-@app.route('/')
-def index():
-    print("Dojo")
-    return render_template("hello.html")
 
 
 @app.route('/hello/<name>')          # The "@" decorator associates this route with the function immediately following

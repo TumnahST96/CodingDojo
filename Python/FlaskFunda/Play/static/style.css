@@ -1,0 +1,27 @@
+* {
+    font-family: 'Antonio', sans-serif;
+    color: ghostwhite;
+}
+
+body {
+    background-color: white;
+    padding: 20px;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Box1 {
+    margin-right: 5px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
