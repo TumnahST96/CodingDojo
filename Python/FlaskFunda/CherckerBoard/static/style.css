@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Antonio', sans-serif;
+    color: ghostwhite;
+}
+
+body {
+    background-color: white;
+    padding: 20px;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+.boxes {
+    text-align: center;
+    background-color: peachpuff;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.Box1 {
+    /* margin-right: 5px;
+    margin-bottom: 50px;
+    margin-top: 20px; */
+    /* margin: 0 auto; */
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+.inbox {
+    height: 100px;
+    width: 100px;
+    border: solid;
+    border-collapse: collapse;
+}

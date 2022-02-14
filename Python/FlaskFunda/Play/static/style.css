@@ -14,6 +14,9 @@ h1 {
 }
 
 .boxes {
+    height: auto;
+    width: auto;
+    background-color: blue;
     display: flex;
     flex-wrap: wrap;
 }

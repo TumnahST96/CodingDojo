@@ -7,21 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
-
-
 </head>
 
 <body>
     <h1>Welcome</h1>
     <div class="boxes">
 
-        {% for x in range(0,times): %}
-        <div class="Box1" style="background-color: {{ col1 }}"></div>
+        {% for x in range(0,row): %}
+        <div class="Box1">
+            {% for y in range(0,col): %} {%if ((x+y)%2==0)%}
+            <div class="inbox" style="background-color: {{ col1 }}"></div>
+
+            {%else%}
+            <div class="inbox"></div>
+
+            {% endif %} {% endfor %}
+
+        </div>
 
         {% endfor %}
 
     </div>
-
 </body>
 
 </html>
