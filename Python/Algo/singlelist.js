@@ -13,6 +13,23 @@ class SLList {
         this.head = null
     }
 
+    findVal(value) {
+        console.log("hi")
+        var temp = this.head
+        if (this.head == null) {
+            return false
+        }
+
+        while (temp.value) {
+            console.log("heyyyy")
+            if (temp.value == value) {
+                return true
+            }
+            temp = temp.next
+        }
+        return false
+    }
+
     addToFront(value) {
         // step #1 Make a new node
         var newNode = new Node(value);
@@ -121,8 +138,9 @@ sll.addToFront(-2)
 
 
 sll.printValues()
-sll.removeFromBack()
+    // sll.removeFromBack()
 sll.printValues()
-sll.removeFromFront()
-
+    // sll.removeFromFront()
+console.log("hi ", sll.findVal(5))
+    // console.log(sll.findVal(7))
 sll.printValues()

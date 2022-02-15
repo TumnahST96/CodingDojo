@@ -22,19 +22,17 @@
             </tr>
         </thead>
         <tbody>
+
+            <!-- <td></td> -->
+            {%for x in range (0, length)%}
             <tr>
-                <!-- <td></td> -->
-                {%for x in range (0, length)%}
                 <th scope="row">{{x+1}}</th>
                 <td class="widen"> {{ users[x].first_name }}</td>
                 <td class="widen"> {{ users[x].last_name }} </td>
                 <td class="widen">{{ users[x].first_name+ ' '+users[x].last_name }}</td>
-
-
-
-                {% endfor %}
-
             </tr>
+
+            {% endfor %}
         </tbody>
 
 
