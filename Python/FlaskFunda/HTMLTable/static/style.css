@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(148, 191, 247);
+}
+
+td,
+th {
+    width: 400px;
+    border-style: solid;
+    text-align: center;
+    pad: 10px;
+}
+
+.widen {
+    width: 400px;
+    margin: auto;
+}
+
+table {
+    margin: 0 20px;
+    border-collapse: collapse;
+    align-items: center;
+}
