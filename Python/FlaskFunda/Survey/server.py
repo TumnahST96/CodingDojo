@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template,request, redirect, session
 import random
 
@@ -14,9 +15,8 @@ def index():
 @app.route("/show")
 def show_user():
     print("Showing the User Info From the Form")
-    print(request.form)
-    return render_template('show.html', name_on_template=session['Name'], location_on_template=session['Location'],
-    language_on_template=session['Language'], comment_on_template=session['Comment'] )
+    
+    return render_template('show.html' )
     
 
 
@@ -30,7 +30,12 @@ def create_user():
     session['Comment'] = request.form['comment']
     return redirect("/show")
 
-
+# adding this method
+@app.route("/reset", methods=["POST"])
+def funks():
+    
+    
+    return redirect('/' )
 
     
 if __name__ == "__main__":

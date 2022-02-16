@@ -7,8 +7,10 @@ app.secret_key = 'root'
 # our index route will handle rendering our form
 @app.route('/' )
 def index():
-   
-    session['num'] = random.randint(1, 100) 		# random number between 1-100
+    if('guess' not in session):
+
+        session['guess']=0
+        session['num'] = random.randint(1, 100) 		# random number between 1-100
     
 
     return render_template("index.html")
