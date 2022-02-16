@@ -4,8 +4,9 @@ from flask import Flask, render_template,request, redirect, session
 app = Flask(__name__)
 app.secret_key = 'root' 
 # our index route will handle rendering our form
-@app.route('/')
+@app.route('/' )
 def index():
+    
     if 'counter' not in session:
          session['counter'] = 0
 
