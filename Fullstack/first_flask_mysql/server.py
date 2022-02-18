@@ -23,6 +23,10 @@ def show_friend(friend_id):
     friend = Friend.one_friend(data)
     return render_template("show_one.html", friend = friend)
 
+@app.route("/new_friend")
+def new_friend():
+    return render_template("new_friend.html")
+
 
 
 
