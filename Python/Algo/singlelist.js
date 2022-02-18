@@ -13,66 +13,80 @@ class SLList {
         this.head = null
     }
 
-    findMax() {
-        var temp = this.head;
-        var keep = this.head.value
-        console.log("hi in mx")
-        if (this.head == null) {
-            return;
-        } else {
-            var ct = 0;
-            while (temp != null) {
-                if(keep<temp.value){
-                    keep = temp.value
-                    
-                }
-                temp = temp.next
-            }
-            sll.addToBack(keep)
-            sll.Remover(keep, 1)
-            console.log("max is ", keep)
-            return
+    reverse() {
+        var prev;
+        var current = this.head
+        var next;
+        while (current != null) {
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
         }
-    } 
-
-    Remover (keep, flag){
-        temp = this.head
-        if (flag == 1){
-            while (temp.next.next!= null) {
-                // console.log("next ", temp.next)
-                
-
-                temp = temp.next
-
-
-
-            }
-            console.log(temp)
-
-            temp.next = null
-
-        }
-
-        }
-
+        head = prev
+        return this.head;
     }
 
-    findMin() {
-        var temp = this.head;
-        var keep = this.head.value
-        console.log("hi in mn")
-        if (this.head == null) {
-            return;
-        } else {
-            while (temp != null) {
-                keep = Math.min(temp.value, keep)
-                temp = temp.next
-            }
-            sll.addToFront(keep)
-            console.log("min is ", keep)
-            return
-        }
-    }
+    // findMax() {
+    //     var temp = this.head;
+    //     var keep = this.head.value
+    //     console.log("hi in mx")
+    //     if (this.head == null) {
+    //         return;
+    //     } else {
+    //         var ct = 0;
+    //         while (temp != null) {
+    //             if(keep<temp.value){
+    //                 keep = temp.value
+
+    //             }
+    //             temp = temp.next
+    //         }
+    //         sll.addToBack(keep)
+    //         sll.Remover(keep, 1)
+    //         console.log("max is ", keep)
+    //         return
+    //     }
+    // } 
+
+    // Remover (keep, flag){
+    //     temp = this.head
+    //     if (flag == 1){
+    //         while (temp.next.next!= null) {
+    //             // console.log("next ", temp.next)
+
+
+    //             temp = temp.next
+
+
+
+    //         }
+    //         console.log(temp)
+
+    //         temp.next = null
+
+    //     }
+
+    //     }
+
+    // }
+
+    // findMin() {
+    //     var temp = this.head;
+    //     var keep = this.head.value
+    //     console.log("hi in mn")
+    //     if (this.head == null) {
+    //         return;
+    //     } else {
+    //         while (temp != null) {
+    //             keep = Math.min(temp.value, keep)
+    //             temp = temp.next
+    //         }
+    //         sll.addToFront(keep)
+    //         console.log("min is ", keep)
+    //         return
+    //     }
+    // }
 
     findVal(value) {
         console.log("hi find val")
@@ -206,3 +220,5 @@ sll.printValues()
 console.log("hi ", sll.findVal(5))
     // console.log(sll.findVal(7))
 sll.printValues()
+
+sll.printValues(reverse())
