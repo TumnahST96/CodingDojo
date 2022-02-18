@@ -1,4 +1,6 @@
-from flask import Flask, render_template
+
+import re
+from flask import Flask, render_template, request, redirect
 # import the class from friend.py
 
 from friend import Friend
@@ -15,6 +17,10 @@ def index():
     # print(friends)
     return render_template("index.html", all_friends = friends)
 
+
+# =============================
+#show one friend route
+#==============================
 @app.route("/<int:friend_id>")
 def show_friend(friend_id):
     data ={
@@ -27,7 +33,16 @@ def show_friend(friend_id):
 def new_friend():
     return render_template("new_friend.html")
 
-
+@app.route("/create_friend", methods=["POST"])
+def create_friend():
+    
+    data ={
+        "first_name" :request.form["fname"],
+        "last_name" : request.form["lname"],
+        "occupation" : request.form["occ"],
+    }
+    friend_id = Friend.save_friend(data)
+    return redirect(f"/{friend_id}")
 
 
 

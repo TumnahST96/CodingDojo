@@ -31,3 +31,9 @@ class Friend:
         query = "SELECT * FROM friends WHERE id = %(id)s ;"
         results = connectToMySQL("fullstack_schema").query_db(query, data)
         return cls(results[0])
+
+    @classmethod
+    def save_friend(cls, data):
+        query = "INSERT INTO friends (first_name, last_name, occupation, created_at, updated_at) VALUES (%(first_name)s, %(last_name)s, %(occupation)s, NOW(), NOW());"
+        new_id = connectToMySQL("fullstack_schema").query_db(query, data)
+        return new_id
