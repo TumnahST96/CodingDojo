@@ -1,0 +1,16 @@
+-- select concat(first_name, ' ', last_name) as FullName from twitter.users
+
+-- select concat_ws(' ', first_name, ' ', last_name, 'cool') as FullName from twitter.users
+
+-- select length(last_name) as last_len from twitter.users;
+
+-- select lower(last_name) as last_lower from twitter.users;
+
+-- --DATE, HOUR, DAYTIME, MONTH. NOR, DATE_FORMAT()
+
+-- SELECT HOUR (CREATED_AT) AS DATE_HOUR, created_at FROM twitter.users;
+-- SELECT dayname(CREATED_AT) AS DATE_HOUR, created_at FROM twitter.users;
+-- SELECT MONTH (CREATED_AT) AS MONTHNAME, created_at FROM twitter.users;
+-- select NOW() AS RIGHTNOW;
+
+-- select date_format(CREATED_AT, '%W %M %e, %Y') FROM twitter.users

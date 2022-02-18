@@ -1,0 +1,33 @@
+-- select first_name, clients.last_name, billing.amount, billing.charged_datetime
+-- from clients 
+-- join billing on clients.id = billing.clients_id;
+
+-- select domain_name, first_name, last_name
+-- from leads join sites on sites.clients_id = leads.id;
+
+-- select clients.first_name as client_firstName, clients.last_name, sites.domain_name,leads.first_name as leads_firstname
+-- from clients join sites on clients.id = sites.clients_id
+-- join leads on leads.sites_id = sites.id;
+
+-- select clients.first_name, clients.last_name, sites.domain_name
+-- from clients left join sites 
+-- on clients.id = sites.clients_id;
+
+-- --when using group by, use a math function. anythiong youre printing, group that for the group by youre
+-- working with. also math func are sum, avg, max, min 
+-- select first_name, clients.last_name, sum(billing.amount), billing.charged_datetime
+-- from clients 
+-- join billing on clients.id = billing.clients_id
+-- group by clients.id
+
+-- select group_concat(' ', domain_name) as domains, clients.first_name, clients.last_name
+-- from sites join clients where sites.clients_id = clients.id
+-- group by clients_id;
+
+-- select COUNT(leads.id), sites.domain_name 
+-- from sites
+-- join leads on sites.id = leads.sites_id
+-- group by (sites.id)
+
+
+

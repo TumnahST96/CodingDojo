@@ -1,0 +1,27 @@
+DELETE FROM dojos WHERE dojos.id<4;
+select * from dojos
+
+
+INSERT INTO dojos(name, created_at, updated_at)
+VALUES ('abs', now(), now());
+
+INSERT INTO ninjas(id, first_name, last_name, age, created_at, updated_at)
+VALUES (1, 'xys', 'abs', 22,  now(), now());
+
+INSERT INTO ninjas(id, first_name, last_name, age, created_at, updated_at)
+VALUES (2, 'xys', 'abs', 22,  now(), now());
+
+INSERT INTO ninjas(id, first_name, last_name, age, created_at, updated_at)
+VALUES (3, 'xys', 'abs', 22,  now(), now());
+
+UPDATE ninjas
+SET dojo_id = 1
+WHERE id = 1;
+
+UPDATE ninjas
+SET dojo_id = 1
+WHERE id = 2;
+
+UPDATE ninjas
+SET dojo_id = 1
+WHERE id = 3;

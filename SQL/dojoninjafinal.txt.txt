@@ -1,0 +1,54 @@
+-- INSERT INTO dojo (name, created_at, updated_at)
+-- VALUES ('tamma', now(), now());
+-- INSERT INTO dojo (name, created_at, updated_at)
+-- VALUES ('sultana', now(), now());
+-- INSERT INTO dojo (name, created_at, updated_at)
+-- VALUES ('yamu', now(), now());
+-- DELETE FROM dojo WHERE id<4;
+-- INSERT INTO dojo (name, created_at, updated_at)
+-- -- VALUES ('Nottamma', now(), now());
+
+-- INSERT INTO dojo (name, created_at, updated_at)
+-- VALUES ('notsultana', now(), now());
+-- INSERT INTO dojo (name, created_at, updated_at)
+-- VALUES ('notyamu', now(), now());
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t1', 's1', '22', now(), now(),  '1');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t3', 's3', '21', now(), now(),  '1');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t2', 's2', '20', now(), now(),  '1');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t1', 's1', '22', now(), now(),  '2');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t3', 's3', '21', now(), now(),  '2');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t2', 's2', '20', now(), now(),  '2');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t1', 's1', '22', now(), now(),  '3');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t3', 's3', '21', now(), now(),  '3');
+
+-- INSERT INTO ninja (first_name,last_name, age, created_at, updated_at, dojo_id)
+-- VALUES ('t2', 's2', '20', now(), now(),  '3');
+
+-- select * from  ninja 
+-- join dojo where ninja.dojo_id = dojo.id and dojo.id = 1;
+
+-- select group_concat(' ', name) as students, dojo.id from  ninja 
+-- join dojo where ninja.dojo_id = dojo.id and dojo.id = 3
+-- group by dojo.id;
+
+-- SELECT * FROM ninja 
+-- ORDER BY ID DESC LIMIT 1  
+
+select * from ninja;
+select * from dojo;
