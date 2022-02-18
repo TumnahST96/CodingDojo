@@ -14,11 +14,11 @@ def create_pet():
     data = {
         "name": request.form["pet_name"],
         "age": request.form["pet_age"],
-        "pet_type": request.form["pet_type"],
+        "type": request.form["pet_type"],
         "owner_id": request.form["pet_owner_id"]
     }
     #====================================
     #inser pet into pets, will insert id. 
     #====================================
     pet_id = Pet.save_pet(data)
-    return("/")
+    return redirect("/")
