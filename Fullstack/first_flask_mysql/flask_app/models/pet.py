@@ -12,8 +12,3 @@ class Pet:
 
         self.owner_id = data["owner_id"]
 
-    @classmethod
-    def save_pet(cls, data):
-        query = "INSERT INTO pets (name, age, type, owner_id, created_at)VALUES (%(name)s, %(age)s, %(type)s, %(owner_id)s, NOW());"
-        new_pet_id = connectToMySQL("fullstack_schema").query_db(query, data)
-        return new_pet_id

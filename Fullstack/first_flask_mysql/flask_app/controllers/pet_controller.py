@@ -22,3 +22,12 @@ def create_pet():
     #====================================
     pet_id = Pet.save_pet(data)
     return redirect("/")
+
+
+#================================================
+#Display all pets with owners
+#================================================
+
+@app.route("/all_pets")
+def all_pets():
+    return render_template("all_pets.html")
