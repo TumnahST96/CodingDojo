@@ -10,6 +10,23 @@
 
 <body>
     <h1>All pets and owners</h1>
+    {% for pet in pets%}
+    <p>{{pet.name}}</p>
+    <p>{{pet.age}}</p>
+    <p>{{pet.type}}</p>
+    <p>{{pet.owner_id}}</p>
+    <p>====================</p>
+
+    {%endfor%}
+    <p>#######################################</p>
+    {% for one_pet in pets_and_owners%}
+    <p>{{one_pet.name}}</p>
+    <p>{{ one_pet.age}}</p>
+    <p>{{ one_pet.type}}</p>
+    <p>{{ one_pet.owner.first_name}}</p>
+    <p>====================</p>
+
+    {%endfor%}
 </body>
 
 </html>

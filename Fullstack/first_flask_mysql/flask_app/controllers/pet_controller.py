@@ -27,7 +27,10 @@ def create_pet():
 #================================================
 #Display all pets with owners
 #================================================
-
+#extra below
 @app.route("/all_pets")
-def all_pets():
-    return render_template("all_pets.html")
+def display_all_pets():
+    get_all_pets = Pet.all_pets()
+    pets_with_owners = Pet.get_pets_with_owners()
+    return render_template("all_pets.html", 
+    pets = get_all_pets, pets_and_owners= pets_with_owners)
