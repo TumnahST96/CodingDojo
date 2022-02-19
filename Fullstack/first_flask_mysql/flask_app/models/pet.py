@@ -49,11 +49,11 @@ class Pet:
                 "first_name": row["first_name"],
                 "last_name ": row["last_name"],
                 "occupation": row["occupation"],
-                "created_at": row["friends.created_at"],
-                "updated_at": row["friends.updated_at"]
+                "created_at": row["friends.created_at"]
+                # "updated_at": row["friends.updated_at"]
             }
 
-            print("jello ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+            print("jello ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^jello")
 
             #now attach primary and secondary instances together 
 
