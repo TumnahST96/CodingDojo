@@ -1,4 +1,5 @@
 
+import email
 from mysqlconnection import connectToMySQL
 
 class User:
@@ -25,6 +26,12 @@ class User:
         print(uzs)
         return uzs
 
+    #create an inser method
+    @classmethod
+    def save(cls, data):
+        query = "INSERT INTO user_tab (first_name, last_name, email, created_At, updated_at) VALUES (%(first_name)s, %(last_name)s, %(email)s,  NOW(), NOW())"
 
-
+        return connectToMySQL('users').query_db(query, data)
+       
+        
 
