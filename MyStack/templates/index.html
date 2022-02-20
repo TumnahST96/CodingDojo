@@ -11,26 +11,41 @@
 </head>
 
 <body>
+    <!-- #======================Step 5=============================
+    #this is our home page. however we want our homepage to look like
+    #after being called, we desing it here 
+    #============================================================== -->
     <h1 class="text-center">Here are our Users!</h1>
 
     <table class="table table-dark">
         <thead>
             <tr>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
                 <th scope="col">Email</th>
-                <th scope="col">Created at</th>
+                <th scope="col">Created At</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
+        <!-- #======================Step 6=============================
+        #look at jinja for look thats iterating get_all. what is get_all
+        #look back at server.py for get_all 
+        #============================================================== -->
         <tbody>
             {%for each_user in get_all%}
             <tr>
-
-
                 <td>{{each_user.first_name}}</td>
                 <td>{{each_user.last_name}}</td>
                 <td>{{each_user.email}}</td>
                 <td>{{each_user.created_at}}</td>
+                <td>
+                    <!--  #======================Step 7============================= 
+                    base don whatever option we pick-->
+                    <a href="/{{each_user.id}}" class="show" title="Show">Show</a>
+                    <a href="/{{each_user.id}}/edit" class="edit" title="Edit">Edit</a>
+                    <a href="/{{each_user.id}}/delete" class="delete" title="Delete">Delete</a>
+
+                </td>
             </tr>
             {% endfor %}
 
