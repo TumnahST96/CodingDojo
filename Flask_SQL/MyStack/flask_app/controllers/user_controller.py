@@ -1,8 +1,8 @@
 
-import imp
 from flask_app import app
 from flask import render_template, request, redirect
 from flask_app.models.user import  User
+
 
 #=================Step 1==================
 #This is like main. Program starts here
