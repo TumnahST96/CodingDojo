@@ -42,8 +42,8 @@ def mixed(dojo_id):
     data = {
         "dojo_id": dojo_id
     }
-    showMix = Ninja.ShowMix(dojo_id)
-    return render_template("mixed.html", showMix = showMix)
+    dojo = Dojo.ShowMix(data)
+    return render_template("mixed.html", dojo = dojo)
 
 
 

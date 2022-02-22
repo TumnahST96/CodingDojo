@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="card bg-dark mb-3" style="width: 25rem;">
+    <div class="row card bg-dark mb-3" style="width: 25rem;">
 
         <h1 class="text-primary text-center">New Dojo</h1>
         <div class="form-group">
@@ -33,33 +33,29 @@
 
 
     <div>
-        <h1 class="text-center">All Dojos</h1>
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th scope="col">Dojos</th>
-                    <th scope="col">Their Ninjas</th>
-                </tr>
-            </thead>
-            <tbody>
-                <ul class="list-group list-group-flush">
-                    {% for x in all_dojo %}
-                    <tr>
-                        <td>
-                            <li class="list-group-item text-warning text-center bg-dark">{{x.name}}</li>
-                        </td>
+        <div class=" card bg-dark mb-3" style="width: 25rem;">
+            <h1 class="text-primary text-center">All Dojos</h1>
 
-                        <td>
-                            <a href="/{{x.id}}" class="show" title="Show">Show</a>
-                        </td>
-                        {% endfor %}
-                    </tr>
 
-                </ul>
-            </tbody>
 
-        </table>
+            <ul class="list-group list-group-flush">
+                {% for x in all_dojo %}
+
+                <a href="/{{x.id}}">
+                    <li class="list-group-item text-warning text-center bg-dark">{{x.name}}</li>
+                </a>
+
+                {% endfor %}
+
+
+            </ul>
+
+        </div>
+
+
     </div>
+    <a href="/new_Ninja">Add Ninja</a>
+    <a href="/show_all_Ninja">Show All Ninja</a>
 
 
 </body>
