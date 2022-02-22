@@ -17,11 +17,6 @@ def index():
 def new_Ninja():
 
     dojos = Dojo.all_dojo()
-
-    # data = {
-    #     "name" : request.form["fname"]
-    # }
-    # Ninja.save(data)
     return render_template("new_ninja.html", dojos = dojos)
 
 @app.route("/create_Ninja", methods=["POST"])
@@ -35,10 +30,20 @@ def create_Ninja():
     nin_id= Ninja.saveNinja(data)
     return redirect("/")
 
+@app.route("/show_all_Ninja")
+def show_all():
+    all_ninja = Ninja.all_ninja()
+    return render_template("show_ninja.html", all_ninja = all_ninja)
 
 
 
-
+@app.route("/<int:dojo_id>")
+def mixed(dojo_id):
+    data = {
+        "dojo_id": dojo_id
+    }
+    showMix = Ninja.ShowMix(dojo_id)
+    return render_template("mixed.html", showMix = showMix)
 
 
 

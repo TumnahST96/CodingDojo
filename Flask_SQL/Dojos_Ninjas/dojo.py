@@ -23,7 +23,9 @@ class Dojo:
         print(dojo)
         return dojo
 
-    classmethod
+    @classmethod
     def save(cls, data):
         query = "INSERT INTO dojo (name) VALUES (%(name)s, NOW(), NOW());"
         return connectToMySQL('dojonin').query_db(query, data)
+
+    

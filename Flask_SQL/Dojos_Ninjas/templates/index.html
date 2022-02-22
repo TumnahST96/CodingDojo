@@ -32,17 +32,35 @@
     </div>
 
 
-    <div class="card bg-dark mb-3" style="width: 18rem;">
-        <div class="card-header text-primary text-center">
-            <h1>All Dojos</h1>
-        </div>
-        <ul class="list-group list-group-flush">
-            {% for one_friend in all_dojo %}
-            <li class="list-group-item text-warning text-center bg-dark">{{one_friend.name}}</li>
-            {% endfor %}
-        </ul>
+    <div>
+        <h1 class="text-center">All Dojos</h1>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Dojos</th>
+                    <th scope="col">Their Ninjas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ul class="list-group list-group-flush">
+                    {% for x in all_dojo %}
+                    <tr>
+                        <td>
+                            <li class="list-group-item text-warning text-center bg-dark">{{x.name}}</li>
+                        </td>
+
+                        <td>
+                            <a href="/{{x.id}}" class="show" title="Show">Show</a>
+                        </td>
+                        {% endfor %}
+                    </tr>
+
+                </ul>
+            </tbody>
+
+        </table>
     </div>
-    <a href="/new_Ninja" class="btn btn-primary">Add Ninja</a>
+
 
 </body>
 
