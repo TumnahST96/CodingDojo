@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    </head>
+
+    <body>
+        <h1>New Books</h1>
+        <form action="/add_newBook" method="post">
+            <label for="name">Title:</label>
+            <input type="text" name="book_title">
+
+            <label for="name">Number of pages:</label>
+            <input type="int" name="num_of_pages">
+
+            <input type="submit" value="Add Book">
+        </form>
+
+        <h1 class="text-center">All Books!</h1>
+
+        <table class="table table-info table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+
+                </tr>
+            </thead>
+            <!-- #======================Step 6=============================
+        #look at jinja for look thats iterating get_all. what is get_all
+        #look back at server.py for get_all 
+        #============================================================== -->
+            <tbody>
+                {%for i in allBooks%}
+                <tr>
+                    <td>{{i.title}}</td>
+
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary">Home</a>
+    </body>
+
+    </html>
+</body>
+
+</html>

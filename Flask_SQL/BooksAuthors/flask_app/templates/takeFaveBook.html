@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <h1>Add Favorite Book</h1>
+        <form action="/add_Fave" , method="post">
+            <div class="form-group  p-5 rounded">
+                <label for="book_id">Books: </label>
+                <select name="dojo_id">
+                    {%for i in allBooks%}
+                    <option value="{{i.id}}">{{i.Title}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+        </form>
+
+        <h1 class="text-center">All Authors!</h1>
+
+
+
+    </body>
+
+</html>

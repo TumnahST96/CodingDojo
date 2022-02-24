@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>New Author</h1>
+    <form action="/add_newAuthor" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="author_name">
+
+        <input type="submit" value="Add Author">
+    </form>
+
+    <h1 class="text-center">All Authors!</h1>
+
+    <table class="table table-info table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+
+            </tr>
+        </thead>
+        <!-- #======================Step 6=============================
+        #look at jinja for look thats iterating get_all. what is get_all
+        #look back at server.py for get_all 
+        #============================================================== -->
+        <tbody>
+            {%for i in authors%}
+            <tr>
+                <td><a href="/AuthPage/{{i.id}}">{{i.name}}></a></td>
+
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <a href="/new_book" class="btn btn-primary">Add Book</a>
+</body>
+
+</html>

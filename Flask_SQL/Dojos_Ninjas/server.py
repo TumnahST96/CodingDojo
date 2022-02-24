@@ -46,6 +46,33 @@ def mixed(dojo_id):
     return render_template("mixed.html", dojo = dojo)
 
 
+#LANDING PAGE FOR LOGIN AND REG
+@app.route("/log_reg")
+def log_reg():
+    return render_template("log_reg.html")
+
+
+
+#PROCESSING REGISTRATION
+@app.route(".registration")
+def register():
+
+
+    data = {
+        "first_name" : request.form["first_name"],
+        "last_name" : request.form["last_name"],
+        "email" : request.form["email"],
+        "password" : request.form["password"]
+
+        
+    }
+    return redirect("/")
+
+
+
+#PROCESSING LOGIN
+
+
 
 
 
