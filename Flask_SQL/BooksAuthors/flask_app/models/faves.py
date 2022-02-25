@@ -1,5 +1,6 @@
-import imp
+
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app.models import books, authors
 
 
 class Fave:
@@ -21,20 +22,22 @@ class Fave:
 
     @classmethod
     def faveAuth(cls, data):
-        query = "SELECT * FROM favorites LEFT JOIN authors ON favorites.authors_id = authors.id WHERE authors_id = %(id)s;"
+        query = "SELECT * FROM favorites LEFT JOIN authors ON favorites.authors_id = authors.id left join books on books.id = favorites.books_id WHERE authors_id = %(id)s;"
         results = connectToMySQL("books").query_db(query, data)
-        all_books_w_authors = []
+        one_auth_w_fave = authors.Author(results[0])
 
         for i in results:
-            one_book = cls(i)
-            author_data = {
-                "id" : i["authors.id"],
-                "name" : i["name"],
-                "created_at" : i["friends.created_at"],
-                "updated_at" : i["friends.updated_at"]
+            book_data = {
+                "id" : i["books.id"],
+                "title" : i["title"],
+                "num_of_pages":i["num_of_pages"],
+                "created_at" : i["books.created_at"],
+                "updated_at" : i["books.updated_at"]
             }
-            oneBook.AuthorTo = authors.Author(owner_data)
-            all_books_w_authors.append(oneBook)
+            one_auth_w_fave.books.append(books.Book(book_data))
+           
+
+        return one_auth_w_fave
 
     # @classmethod
     # def save(cls, data):

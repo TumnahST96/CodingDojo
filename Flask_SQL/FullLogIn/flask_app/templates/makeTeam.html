@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>make a team</p>
+    <a href="/">home</a>
+    <a href="makeTeam">Make a team</a>
+    <a href="updateTeam">Update a Team</a>
+
+
+
+    <form action="/makingTeam" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+
+        <label for="location">Location:</label>
+        <input type="text" name="location">
+
+
+        <label for="sports">Sports:</label>
+        <input type="text" name="sports">
+
+        <label for="champs">Champions:</label>
+        <input type="number" name="champs">
+
+        <label for="owner_id">Select a Team:</label>
+        <select name="owner_id">
+                {%for i in all_owners%}
+                <option value="{{i.id}}">
+                    {{i.first_name}}
+                    {{i.last_name}}
+                </option>
+                {%endfor%}
+    
+            </select>
+
+
+
+
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+
+</html>

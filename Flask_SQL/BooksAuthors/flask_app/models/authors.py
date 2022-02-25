@@ -9,6 +9,7 @@ class Author:
 
         self.created_at = data["created_at"]
         self.updated_at = data["updated_at"]
+        self.books = []
 
     @classmethod
     def allAuthors(cls):
@@ -25,6 +26,7 @@ class Author:
         query = "INSERT INTO authors (name, created_at, updated_at) VALUES (%(name)s, NOW(), NOW());"
         return connectToMySQL("books").query_db(query, data)
         
-
-
-    
+    @classmethod
+    def addBookandAuth(cls, data):
+        query = "INSERT INTO favorites (authors_id, books_id) values(%(author_id)s,%(book_id)s);"
+        return connectToMySQL("books").query_db(query, data)    

@@ -12,18 +12,27 @@
 
     <body>
         <h1>Add Favorite Book</h1>
-        <form action="/add_Fave" , method="post">
+        <form action="/add_Fave/{{author_id}}" , method="post">
             <div class="form-group  p-5 rounded">
                 <label for="book_id">Books: </label>
-                <select name="dojo_id">
+                <select name="book_id">
                     {%for i in allBooks%}
-                    <option value="{{i.id}}">{{i.Title}}</option>
+                    <option value="{{i.id}}">{{i.title}}</option>
                     {%endfor%}
                 </select>
             </div>
+            <input type="submit" value="Add Book">
         </form>
 
-        <h1 class="text-center">All Authors!</h1>
+
+        <h1>
+
+
+
+        </h1>
+
+
+
 
 
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>You are Viewing one Owner</h1>
+
+    {{owner.first_name}} {{owner.last_name}}
+
+    <p>List of teams owned:</p>
+    {% for i in owner.teams%}
+    <p>
+        {{i.name}} - {{i.location}}
+    </p> {%endfor%}
+</body>
+
+</html>
