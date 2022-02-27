@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="Box1">
+        {% with messages = get_flashed_messages() %}
+        <!-- declare a variable called messages -->
+        {% if messages %}
+        <!-- check if there are any messages -->
+        {% for message in messages %}
+        <!-- loop through the messages -->
+        <p>{{message}}</p>
+        <!-- display each message in a paragraph tag -->
+        {% endfor %} {% endif %} {% endwith %}
+        <h1>Register:</h1>
+        <form action="/register" method="post">
+            <label>First Name:</label>
+            <input type="text" name="F_name">
+
+            <label>Last Name:</label>
+            <input type="text" name="L_name">
+
+            <label>Email:</label>
+            <input type="text" name="email">
+
+            <label>Password:</label>
+            <input type="text" name="passcode">
+
+            <label>Confirm:</label>
+            <input type="text" name="confirm_pass">
+
+            <input type="submit" value="Create">
+        </form>
+    </div>
+
+    <div class="Box2">
+        <h1>Login</h1>
+        <form action="/user_login" method="post">
+            <label>Email:</label>
+            <input type="text" name="email">
+
+            <label>Password:</label>
+            <input type="text" name="passcode">
+            <input type="submit" value="Log In">
+        </form>
+
+    </div>
+
+
+    <h1>Since it didn't work, working on next page</h1>
+
+    <a href="/Dashboard">Next </a>
+
+
+    <h1>HI</h1>
+</body>
+
+</html>
