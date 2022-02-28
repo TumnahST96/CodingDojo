@@ -61,14 +61,20 @@ def showSingle(id):
 
 @app.route("/<int:show_id>/edit")
 def editSingle(show_id):
-    show_id = show_id
-    return render_template("editShow.html", show_id = show_id)
+   
+    data = {
+        "show_id" : show_id
+    }
+   
+    info = Show.getSingle(data)
+    
+    return render_template("editShow.html", info = info)
 
 # /user_id/show_id/editYourShow"
 
 @app.route("/<int:show_id>/editYourShow", methods = ["POST"])
 def editYourShow(show_id):
-    
+    show_id = show_id
     data = {
         "show_id" : show_id,
         "title" : request.form["title"], 
@@ -81,6 +87,24 @@ def editYourShow(show_id):
     }
     edit_show = Show.saveEdited(data)
     return redirect ("/Dashboard")
+
+# /{{i.id}}/delete
+
+@app.route("/<int:show_id>/delete")
+def deleteThis(show_id):
+    show_id = show_id
+    data = {
+        "show_id" : show_id
+    }
+
+    deleted = Show.delete(data)
+    return redirect ("/Dashboard")
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/")
+
 
 
 

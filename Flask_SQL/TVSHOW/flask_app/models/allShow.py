@@ -8,8 +8,11 @@ class Show:
         self.title = data["title"]
         self.network = data["network"]
 
+
         self.created_at = data["created_at"]
         self.updated_at = data["updated_at"]
+
+        self.description = data["description"]
         self.user_id = data["user_id"]
         
 
@@ -30,17 +33,17 @@ class Show:
         return results
 
     @classmethod
-    def showSingle(cls, data):
+    def getSingle(cls, data):
 
         query = "SELECT * FROM shows WHERE id = %(show_id)s"
         results = connectToMySQL("tvshows").query_db(query, data)
 
-        resut = []
+        # resut = []
 
-        for i in results:
-            resut.append(cls(i))
+        # for i in results:
+        #     resut.append(cls(i))
 
-        return resut
+        return results[0]
 
     @classmethod
     def get_shows_and_users(cls, data):
@@ -75,4 +78,9 @@ class Show:
         query = "UPDATE shows SET title = %(title)s, network = %(network)s, created_at = %(created_at)s, description = %(description)s WHERE id = %(show_id)s;"
 
         return connectToMySQL("tvshows").query_db(query, data)
+    @classmethod
+    def delete(cls, data):
+        query = "DELETE FROM shows WHERE id = %(show_id)s;"
+        return connectToMySQL("tvshows").query_db(query, data)
+
 

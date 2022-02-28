@@ -11,23 +11,27 @@
 <body>
 
     <!-- user_id = user_id, show_id  -->
+    <div>
+        <a href="/logout">Logout</a>
+    </div>
 
-    <form action="/show_id/editYourShow" method="post">
+    <form action="/{{info.id}}/editYourShow" method="post">
 
         <label for="title">Title: </label>
-        <input class="form-control" type="text" name="title">
+        <input class="form-control" type="text" name="title" value="{{info.title}}">
         <br>
         <label for="network">Network:</label>
-        <input class="form-control" type="text" name="network">
-        <br>
-        <label for="released">Released Date:</label>
-        <input class="form-control" type="date" name="released">
-        <br>
-        <label for="description">Description:</label>
-        <textarea rows="3" class="form-control" type="text" name="description"></textarea>
+        <input class="form-control" type="text" name="network" value="{{info.network}}">
         <br>
         <br>
-        <input class="btn btn-outline-dark" type="submit" value="Add">
+        <label for="released ">Released Date:</label>
+        <input class="form-control " type="date " name="released" value="{{info.created_at}}">
+        <br>
+        <label for="description ">Description:</label>
+        <textarea rows="3 " class="form-control " type="text " name="description">{{info.description}}</textarea>
+        <br>
+        <br>
+        <input class="btn btn-outline-dark " type="submit" value="Add">
     </form>
 
 
