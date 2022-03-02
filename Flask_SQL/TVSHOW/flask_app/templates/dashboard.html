@@ -33,14 +33,18 @@
             {%for i in allShow%}
             <tr>
 
-
                 <td>{{i.title}}</td>
                 <td>{{i.network}}</td>
                 <td>{{i.created_at }}</td>
                 <td>
                     <!-- #======================Step 7============================= -->
-                    <a href="/{{i.id}}/show" class="show" title="Show">Show</a> {{user_info.id}} {{i.user_id}}
+                    <a href="/{{i.id}}/show" class="show" title="Show">Show</a>
                     <br>
+                    <br> {% if user_info.id != i.user_id%}
+                    <a class="btn btn-outline-primary float-end" href="/Likes/i.user_id/i.id">Likes</a>
+
+
+                    <br> {%endif%}
                     <br> {% if user_info.id == i.user_id%}
 
                     <a href="{{i.id}}/edit" class="edit" title="Edit">Edit</a>
@@ -56,8 +60,9 @@
 
     <!--  #======================Step 7============================= 
         base don whatever option we pick-->
-    <a href="/addShows/{{user_info.id}}" class="Addshow" title="AddShow">Add a Show</a>
+    <a href="/addShows" class="Addshow" title="AddShow">Add a Show</a>
 
 </body>
+<!-- <script src="script.js"></script> -->
 
 </html>

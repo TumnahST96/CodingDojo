@@ -22,16 +22,22 @@
         <a href="/logout">Logout</a>
     </div>
 
-    <form action="/create_show" method="post">
+    <h1>Put Car Up For Sale</h1>
 
-        <label for="title">Title:</label>
-        <input class="form-control" type="text" name="title">
+    <form action="/create_car" method="post">
+
+        <label for="price">Price:</label>
+        <input class="form-control" type="number" min="1" name="price">
         <br>
-        <label for="network">Network:</label>
-        <input class="form-control" type="text" name="network">
+        <label for="model">Model:</label>
+        <input class="form-control" type="text" name="model">
         <br>
-        <label for="released">Released Date:</label>
-        <input class="form-control" type="date" name="released">
+        <br>
+        <label for="make">Make:</label>
+        <input class="form-control" type="text" name="make">
+        <br>
+        <label for="year">Year:</label>
+        <input class="form-control" type="number" placeholder="YYYY" min="0001" max="9999" name="year">
         <br>
         <label for="description">Description:</label>
         <textarea rows="3" class="form-control" type="text" name="description"></textarea>

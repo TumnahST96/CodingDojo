@@ -1,6 +1,10 @@
-
+from flask_app import app
+from flask_bcrypt import Bcrypt
+bcrypt = Bcrypt(app)
+from flask import flash
 from flask_app.config.mysqlconnection import MySQLConnection, connectToMySQL
 from flask_app.models import user
+from flask import flash
 class Show:
     def __init__(self, data):
         self.id = data["id"]
@@ -14,8 +18,29 @@ class Show:
 
         self.description = data["description"]
         self.user_id = data["user_id"]
-        
 
+        # self.aired_date = data["aired_date"]
+        
+    @staticmethod
+    def validate_input(shows):
+        is_valid = True
+
+        if len(shows['title'])<0:
+            flash("title can't be empyyt")
+            is_valid = False
+
+        if len(shows['network'])<3:
+            flash("network can't be empyyt")
+            is_valid = False
+
+        if len(shows['description'])<2:
+            flash("description can't be empty")
+            is_valid = False
+
+
+
+
+        return is_valid 
     @classmethod
     def get_all(cls):
         query = "SELECT * FROM shows" 
@@ -78,6 +103,9 @@ class Show:
         query = "UPDATE shows SET title = %(title)s, network = %(network)s, created_at = %(created_at)s, description = %(description)s WHERE id = %(show_id)s;"
 
         return connectToMySQL("tvshows").query_db(query, data)
+
+
+        
     @classmethod
     def delete(cls, data):
         query = "DELETE FROM shows WHERE id = %(show_id)s;"

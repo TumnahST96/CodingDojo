@@ -2,6 +2,7 @@
 from flask_app import app
 from flask_app.models.allShow import Show
 from flask_app.models.user import User
+# from flask_app.models.likes import Likes
 from flask import render_template, session, redirect, request, flash
 
 
@@ -17,13 +18,14 @@ def dashboard():
 
     user_info = User.get_by_id(data)
     allShow = Show.get_all()
+    # ic
     return render_template("dashboard.html", allShow = allShow, user_info = user_info)
 
-@app.route("/addShows/<int:id>")
-def addShow(id):
-    id = id
+@app.route("/addShows")
+def addShow():
+    
     data = {
-        "user_id" : id
+        "user_id" : session["user_id"]
     }
     user_info = User.get_by_id(data)
     return render_template("addShow.html", user_info = user_info)
@@ -32,7 +34,8 @@ def addShow(id):
 
 @app.route("/create_show", methods = ["POST"])
 def create_show():
-    
+    if not Show.validate_input(request.form):
+        return redirect("/addShows")
     data = {
         "user_id" : session["user_id"],
         "title" : request.form["title"], 

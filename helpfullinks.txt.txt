@@ -1,2 +1,13 @@
 https://en.wikipedia.org/wiki/Hash_table
 https://en.wikipedia.org/wiki/Binary_search_tree
+
+run a new folder
+
+1. BEFORE activating shell, at project level folder: 
+python -m pipenv install flask pymysql flask-bcrypt
+
+2. Activate Shell: 
+python -m pipenv shell
+
+3. Run Server: 
+python server.py

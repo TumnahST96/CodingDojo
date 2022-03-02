@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <a href="/logout">Logout</a>
+    </div>
+    <a href="/Dashboard" class="show" title="Show">Dashboard</a>
+
+    <p>
+
+    </p>
+
+
+
+    {%for i in showThis%}
+    <p>{{i}}</p>
+    <p>
+        {{i.price}}
+    </p>
+    <p>
+        Model: {{i.model}}
+    </p>
+    <p>
+        Make: {{i.make}}
+    </p>
+    <p>
+        Year: {{i.year}}
+    </p>
+    <p>
+        Description: {{i.description}}
+
+    </p>
+    <P>
+        <h3>Seller</h3> {{i.users_info.first_name}}
+    </P>
+
+    {%endfor%}
+
+    <!-- <a href="/BuyCar/"></a> -->
+</body>
+
+</html>

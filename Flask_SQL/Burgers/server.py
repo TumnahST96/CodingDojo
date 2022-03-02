@@ -1,5 +1,5 @@
 
-from flask_app.controllers import burgers, burger_controller,diner_controller
+from flask_app.controllers import user_controller, dashboard_controller
 
 from flask_app import app
 
