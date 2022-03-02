@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %}
+    <!-- declare a variable called messages -->
+    {% if messages %}
+    <!-- check if there are any messages -->
+    {% for message in messages %}
+    <!-- loop through the messages -->
+    <p>{{message}}</p>
+    <!-- display each message in a paragraph tag -->
+    {% endfor %} {% endif %} {% endwith %}
+    <!-- user_id = user_id, show_id  -->
+    <div>
+        <a href="/addPainting" class="Addshow" title="AddShow">Add Painting</a>
+    </div>
+    <div>
+        <a href="/logout">Logout</a>
+    </div>
+    <a href="/Dashboard" class="show" title="Show">Dashboard</a>
+
+    <h1>Edit a Painting</h1>
+
+    <form action="/{{info.id}}/editYourPaint" method="post">
+        <label for="title">Title:</label>
+        <input class="form-control" type="text" name="title" value="{{info.title}}">
+        <br>
+
+        <label for="price">Price:</label>
+        <input class="form-control" type="number" min="1" name="price" value="{{info.price}}">
+        <br>
+
+
+        <label for="description">Description:</label>
+        <textarea rows="3" class="form-control" type="text" name="description">{{info.description}}</textarea>
+        <br>
+        <br>
+        <input class="btn btn-outline-dark" type="submit" value="Update">
+    </form>
+
+
+
+
+
+
+    </form>
+</body>
+
+</html>
