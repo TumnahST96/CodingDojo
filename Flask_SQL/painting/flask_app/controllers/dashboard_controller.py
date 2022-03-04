@@ -2,6 +2,7 @@
 from flask_app import app
 from flask_app.model.user import User
 from flask_app.model.painting import Painting
+from flask_app.model.Buy import Buying
 from flask import render_template, session, redirect, request, flash
 
 

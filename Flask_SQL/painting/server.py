@@ -1,5 +1,5 @@
 from flask_app import app
-from flask_app.controllers import  registration_controller, dashboard_controller
+from flask_app.controllers import  registration_controller, dashboard_controller, buy_controller
 
 if __name__ == "__main__":
     app.run(debug = True)
