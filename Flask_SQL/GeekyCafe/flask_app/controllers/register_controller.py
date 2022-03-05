@@ -2,13 +2,14 @@ import imp
 from flask_app import app
 from flask_bcrypt import Bcrypt
 from flask_app.models.user import User
-from flask_app.model.message import Message
+# from flask_app.model.message import Message
 from flask import render_template, session, redirect, request, flash
 bcrypt = Bcrypt(app)
 
 
+
 #======================================================================
-#Default Route
+#Default
 #======================================================================
 
 @app.route("/")
@@ -30,7 +31,7 @@ def dashboard():
 
     print(single)
 
-    return render_template("dashboard.html", all_user = all_user, single = single)
+    return render_template("dashboard.html", single = single)
 
 #======================================================================
 #Login
@@ -88,3 +89,6 @@ def register():
     user_id = User.save(data)
     session["user_id"] = user_id
     return redirect("/Dashboard")
+
+
+    

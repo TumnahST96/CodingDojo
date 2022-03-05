@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"name": "painting",
+			"path": "..\\..\\..\\painting"
+		},
+		{
+			"name": "LoginRegistration",
+			"path": "..\\.."
+		}
+	],
+    "settings": {}
+}
