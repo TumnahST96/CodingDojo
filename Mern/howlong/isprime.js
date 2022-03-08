@@ -24,8 +24,9 @@ const createSieve = (number) => {
 
 
 console.log("for any number fro, 0-10,0000, find the list of primes existing")
-setPrime(50);
-createSieve(50);
-for (let i = 0; i <= 50; i++) {
+let number = 100000;
+setPrime(number);
+createSieve(number);
+for (let i = 0; i <= number; i++) {
     if (sieve[i] == 0) console.log(sieve[i], i)
 }
