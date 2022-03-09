@@ -31,11 +31,25 @@ const pokémon = Object.freeze([    
 // ==========================================================
 
 // *********Not working
+const convertToTitleCase = (str) => {
 
-// const typeId = pokémon.filter(t => t.types === ("fire"));
+    let newWord;
 
-// console.log(typeId)
-// ==========================================================
+    for (let i = 0; i < str.length; i++) {
+        let curWord = str[i];
+        if (curWord == 'fire') {
+            return true
+        }
+
+    }
+    return false
+
+}
+
+const typeId = pokémon.map(t => convertToTitleCase(t.types));
+
+console.log(typeId)
+    // ==========================================================
 
 // const tota = pokémon.filter(p => p.types.length>1)
 // console.log(tota)
