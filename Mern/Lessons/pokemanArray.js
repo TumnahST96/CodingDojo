@@ -46,10 +46,10 @@ const convertToTitleCase = (str) => {
 
 }
 
-const typeId = pokémon.map(t => convertToTitleCase(t.types));
+// const typeId = pokémon.map(t => convertToTitleCase(t.types));
 
-console.log(typeId)
-    // ==========================================================
+// console.log(typeId)
+// ==========================================================
 
 // const tota = pokémon.filter(p => p.types.length>1)
 // console.log(tota)
@@ -69,15 +69,14 @@ console.log(typeId)
 // console.log(typeId)
 
 // ==========================================================
-// *********Not working
 
-// const typeId = pokémon.filter(t => t.types[1] === ("flying")).map(t => t.types[0]);
+// const typeId = pokémon.filter(t => t.types[1] === "flying").map(t => t.types[0]);
 
 // console.log(typeId)
 
 // ==========================================================
 // *********Not working
 
-// const typeId = pokémon.filter(t => t.types === ("nomal"))
+const typeId = pokémon.filter(pokeObj => pokeObj.types.includes("normal")).length;
 
-// console.log(typeId)
+console.log(typeId)
