@@ -16,7 +16,7 @@ const convertToTitleCase = (str) => {
     for (let i in words) {
         let curWord = words[i];
         let newWord = '';
-        newWord = curWord[0].toUpperCase() + curWord.slice(1)
+        newWord = curWord[0].toUpper() + curWord.slice(1)
         words[i] = newWord;
     }
     return words.join(" ")
