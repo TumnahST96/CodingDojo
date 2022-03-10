@@ -10,6 +10,7 @@ class PersonCard extends Component {
           </h1>
           <h3>Age: {this.props.Age}</h3>
           <h3>Hair Color: {this.props.hairColor}</h3>
+          <button onClick={this.flipSwitch}>Birthday</button>
         </div>
       </div>
     );

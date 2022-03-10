@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter';
 import PersonCard from './components/PersonCard';
 
 var peopleArr = [
@@ -15,6 +16,9 @@ function App() {
       {peopleArr.map(person =>{
         return <PersonCard firstName = {person.firstName} lastName = {person.lastName} Age = {person.Age} hairColor = {person.hairColor}/>
         })}
+
+      <Counter text = "hey i am component"/>
+     
     </div>
   );
 }
