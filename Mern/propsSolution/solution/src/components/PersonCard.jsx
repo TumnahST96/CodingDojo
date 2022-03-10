@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 
 class PersonCard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="card">
         <div className="content">
-          <h1>{this.props.text}</h1>
-          <p>Age:{this.props.number}</p>
-          <p>Hair Color: {this.props.hair}</p>
+          <h1>
+            {this.props.lastName}, {this.props.firstName}
+          </h1>
+          <h3>Age: {this.props.Age}</h3>
+          <h3>Hair Color: {this.props.hairColor}</h3>
         </div>
       </div>
     );
