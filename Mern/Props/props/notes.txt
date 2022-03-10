@@ -1,0 +1,25 @@
+ternary declaration 
+
+<h1>{number > 0 ? "positivenumebr" : "negative number"}</h1>
+
+function app exercise da2
+
+function App() {
+  const hello = "hwew there";
+
+  const printStuff = (msg) => {
+    console.log(msg);
+  };
+  return (
+    <div className="App">
+      <button className="btn btn-primary">click me</button>
+      <h1></h1>
+
+      <Box text="hey its you" number={42} isDark={true} />
+      <Box text="ohhlalala mee" number={22} isDark={false} />
+      <Box text="omg hereee" number={-14} isDark={true}>
+        <h1>wherwe hidden</h1>
+      </Box>
+    </div>
+  );
+}

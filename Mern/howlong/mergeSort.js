@@ -9,24 +9,24 @@ let l1 = ar1.length - 1
 
 let l2 = ar2.length - 1
 
-let i = j = k = 0
+let i = j = 0
 
 while (i <= l1 && j <= l2) {
     if (ar1[i] >= ar2[j]) {
-        ar3[k++] = ar2[j]
-        j++
+        ar3.push(ar2[j++])
+
     } else {
-        ar3[k++] = ar1[i]
-        i++
+        ar3.push(ar1[i++])
+
     }
 }
 
 while (i <= l1) {
-    ar3[k++] = ar1[i++]
+    ar3.push(ar1[i++])
 }
 
 while (j <= l2) {
-    ar3[k++] = ar2[j++]
+    ar3.push(ar2[j++])
 }
 
 console.log(ar3)

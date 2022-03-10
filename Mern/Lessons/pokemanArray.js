@@ -31,22 +31,22 @@ const pokémon = Object.freeze([    
 // ==========================================================
 
 // *********Not working
-const convertToTitleCase = (str) => {
+// const convertToTitleCase = (str) => {
 
-    let newWord;
+//     let newWord;
 
-    for (let i = 0; i < str.length; i++) {
-        let curWord = str[i];
-        if (curWord == 'fire') {
-            return true
-        }
+//     for (let i = 0; i < str.length; i++) {
+//         let curWord = str[i];
+//         if (curWord == 'fire') {
+//             return true
+//         }
 
-    }
-    return false
+//     }
+//     return false
 
-}
+// }
 
-// const typeId = pokémon.map(t => convertToTitleCase(t.types));
+// const typeId = pokémon.filter(t => t.types.includes("fire"));
 
 // console.log(typeId)
 // ==========================================================
@@ -64,9 +64,9 @@ const convertToTitleCase = (str) => {
 
 // *********Not working
 
-// const typeId = pokémon.map(t => t.types === ("poison"));
+const typeId = pokémon.filter(t => t.types.includes("poison"));
 
-// console.log(typeId)
+console.log(typeId)
 
 // ==========================================================
 
@@ -75,8 +75,8 @@ const convertToTitleCase = (str) => {
 // console.log(typeId)
 
 // ==========================================================
-// *********Not working
 
-const typeId = pokémon.filter(pokeObj => pokeObj.types.includes("normal")).length;
 
-console.log(typeId)
+// const typeId = pokémon.filter(pokeObj => pokeObj.types.includes("normal")).length;
+
+// console.log(typeId)
