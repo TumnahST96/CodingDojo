@@ -1,15 +1,17 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import ClassCounter from "./components/ClassCounter";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Main from "./components/Main";
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        <marquee>hey there</marquee>
-      </h1>
-      <ClassCounter />
+    <div className="app container">
+      <Header />
+      <div className="row">
+        <Navigation />
+        <Main />
+      </div>
     </div>
   );
 }

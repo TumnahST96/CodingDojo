@@ -3,7 +3,7 @@
 //     let pivot = ar[low]
 //     let pivotIdx = low
 //     for(let i = 1; i<high; i++){
-//         if(ar[i]>pivot){
+//         if(ar[i]<pivot){
             
 //             let temp = ar[i]
 //             ar[i] = ar[pivotIdx]
@@ -38,7 +38,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
     return pivotIdx;
 }
 [5,1,2,6,8]
-
+     i
 [2,1,5,8,6]
 function quickSort(arr, left = 0, right= arr.length-1) {
     if(left < right) {
