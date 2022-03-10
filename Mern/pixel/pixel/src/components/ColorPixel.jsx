@@ -1,27 +1,31 @@
 import React, { Component } from "react";
+var randomColor = require("randomcolor");
 
-class Pixel extends Component {
+class ColorPixel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filled: false,
+      color: "white",
     };
   }
 
   onClickHandler = () => {
     this.setState({
-      filled: !this.state.filled,
+      color: randomColor(),
     });
   };
 
   render() {
+    const style = {
+      backgroundColor: this.state.color,
+    };
     return (
       <div
+        style={style}
         onMouseOver={this.onClickHandler}
-        className={this.state.filled ? "pixel filled" : "pixel"}
+        className="pixel"
       ></div>
     );
   }
 }
-
-export default Pixel;
+export default ColorPixel;
