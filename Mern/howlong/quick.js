@@ -37,9 +37,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
     swap(arr, start, pivotIdx);
     return pivotIdx;
 }
-[5,1,2,6,8]
-     i
-[2,1,5,8,6]
+
 function quickSort(arr, left = 0, right= arr.length-1) {
     if(left < right) {
         let pivotIndex = pivot(arr, left, right)
