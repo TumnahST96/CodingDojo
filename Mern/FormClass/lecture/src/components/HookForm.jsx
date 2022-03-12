@@ -24,7 +24,7 @@ const HookForm = (props) => {
   };
 
   const lenghthVaidator = (input, num) => {
-    return input.length > num;
+    return input.length >= num;
   };
 
   const passVaidator = (input1, input2, num) => {
@@ -42,7 +42,7 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
-          {lenghthVaidator(form.Fname, 2) ? (
+          {lenghthVaidator(form.Fname, 2) || form.Fname.length === 0 ? (
             ""
           ) : (
             <span className="alert-danger">You need at least 2 characters</span>
@@ -56,7 +56,7 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
-          {lenghthVaidator(form.Lname, 2) ? (
+          {lenghthVaidator(form.Lname, 2) || form.Lname.length === 0 ? (
             ""
           ) : (
             <span className="alert-danger">You need at least 2 characters</span>
@@ -71,7 +71,7 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           ></input>
-          {lenghthVaidator(form.email, 5) ? (
+          {lenghthVaidator(form.email, 5) || form.email.length === 0 ? (
             ""
           ) : (
             <span className="alert-danger">You need at least 5 characters</span>
@@ -85,6 +85,11 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
+          {lenghthVaidator(form.password, 8) || form.password.length === 0 ? (
+            ""
+          ) : (
+            <span className="alert-danger">You need at least 8 characters</span>
+          )}
         </div>
         <div className="form-group">
           <label className="form-label">Confirm Password</label>
@@ -94,7 +99,8 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
-          {passVaidator(form.password, form.conpass, 8) ? (
+          {passVaidator(form.password, form.conpass, 8) ||
+          form.conpass.length === 0 ? (
             ""
           ) : (
             <span className="alert-danger">
