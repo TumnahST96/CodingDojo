@@ -13,10 +13,7 @@ const HookForm = (props) => {
   const onChangeHandler = (event) => {
     setForm({
       ...form,
-      [event.target.name]:
-        event.target.type === "checkbox"
-          ? event.target.checked
-          : event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -24,6 +21,14 @@ const HookForm = (props) => {
     event.preventDefault();
 
     console.log(form);
+  };
+
+  const lenghthVaidator = (input, num) => {
+    return input.length > num;
+  };
+
+  const passVaidator = (input1, input2, num) => {
+    return input1 === input2 && input1 >= num;
   };
 
   return (
@@ -37,6 +42,11 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
+          {lenghthVaidator(form.Fname, 2) ? (
+            ""
+          ) : (
+            <span className="alert-danger">You need at least 2 characters</span>
+          )}
         </div>
         <div className="form-group">
           <label className="form-lable">Last Name</label>
@@ -46,6 +56,11 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
+          {lenghthVaidator(form.Lname, 2) ? (
+            ""
+          ) : (
+            <span className="alert-danger">You need at least 2 characters</span>
+          )}
         </div>
 
         <div className="form-group">
@@ -56,9 +71,14 @@ const HookForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           ></input>
+          {lenghthVaidator(form.email, 5) ? (
+            ""
+          ) : (
+            <span className="alert-danger">You need at least 5 characters</span>
+          )}
         </div>
-        <div className="form-check">
-          <label className="form-check-label">Password</label>
+        <div className="form-group">
+          <label className="form-label">Password</label>
           <input
             name="password"
             type="text"
@@ -66,14 +86,21 @@ const HookForm = (props) => {
             onChange={onChangeHandler}
           />
         </div>
-        <div className="form-check">
-          <label className="form-check-label">Confirm Password</label>
+        <div className="form-group">
+          <label className="form-label">Confirm Password</label>
           <input
             name="conpass"
             type="text"
             className="form-control"
             onChange={onChangeHandler}
           />
+          {passVaidator(form.password, form.conpass, 8) ? (
+            ""
+          ) : (
+            <span className="alert-danger">
+              both password needs to be same and 8 characters
+            </span>
+          )}
         </div>
         <input type="submit" className="btn btn-primary btn-lg" />
       </form>

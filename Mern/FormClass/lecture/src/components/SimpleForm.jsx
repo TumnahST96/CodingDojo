@@ -25,6 +25,16 @@ const SimpleForm = (props) => {
     console.log(form);
   };
 
+  const lenghthVaidator = (input, num) => {
+    return input.length >= num;
+  };
+
+  const allValid = (inputs) => {
+    return (
+      lenghthVaidator(inputs.flavor, 5) && lenghthVaidator(inputs.sauce, 8)
+    );
+  };
+
   return (
     <div className="w-50 p-3 border border-dark mx-auto">
       <form onSubmit={onSubmitHandler}>
@@ -36,6 +46,11 @@ const SimpleForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
+          {lenghthVaidator(form.flavor, 5) || form.flavor.length === 0 ? (
+            ""
+          ) : (
+            <span className="alert-danger">You need 5 char</span>
+          )}
         </div>
         <div className="form-group">
           <label className="form-lable">Sauce</label>
@@ -45,6 +60,11 @@ const SimpleForm = (props) => {
             className="form-control"
             onChange={onChangeHandler}
           />
+          {lenghthVaidator(form.sauce, 8) || form.sauce.length === 0 ? (
+            ""
+          ) : (
+            <span className="alert-danger">You need 8 char</span>
+          )}
         </div>
 
         <div className="form-group">
@@ -72,7 +92,12 @@ const SimpleForm = (props) => {
             onChange={onChangeHandler}
           />
         </div>
-        <input type="submit" className="btn btn-primary btn-lg" />
+        {/* <input type="submit" className="btn btn-primary btn-lg" /> */}
+        {allValid(form) ? (
+          <input type="submit" className="btn btn-primary btn-lg" />
+        ) : (
+          <input type="submit" className="btn btn-primary btn-lg" disabled />
+        )}
       </form>
     </div>
   );

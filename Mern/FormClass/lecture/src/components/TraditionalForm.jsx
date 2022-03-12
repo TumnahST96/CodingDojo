@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const TraditionalForm = (props) => {
   const [flavor, setFlavor] = useState("");
+  const [flavorError, setFlavorError] = useState("");
   const [sauce, setSauce] = useState("");
   const [topping, setTopping] = useState("");
   const [whip, setWhip] = useState(false);
@@ -13,6 +14,16 @@ const TraditionalForm = (props) => {
     console.log(flavor);
     console.log(submitMe);
   };
+
+  const onFlavorHandler = (event) => {
+    setFlavor(event.target.value);
+
+    if (event.target.value.length < 5) {
+      setFlavorError("a flavor needs 5 character");
+    } else {
+      setFlavorError("");
+    }
+  };
   return (
     <div className="w-50 p-3 border border-dark mx-auto">
       <form onSubmit={onSubmitHandler}>
@@ -21,10 +32,9 @@ const TraditionalForm = (props) => {
           <input
             type="text"
             className="form-control"
-            onChange={(event) => {
-              setFlavor(event.target.value);
-            }}
+            onChange={onFlavorHandler}
           />
+          <span className="alert-danger">{flavorError}</span>
         </div>
         <div className="form-group">
           <label className="form-lable">Sauce</label>
