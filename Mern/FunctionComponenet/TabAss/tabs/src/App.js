@@ -2,42 +2,35 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
+import Tab from "./components/Tab";
+import { Button } from "bootstrap";
 
 function App() {
-  // const [keepTab, setTab] = useState([]);
-  const [tab1, setInfo1] = useState([
-    "inside of tab 1",
-    "a lot of strings",
-    "resides",
+  const [tab, setTab] = useState([
+    { info: "fdasfdsa" },
+    { info: "dsdsd" },
+    { info: "zzzzzz" },
+    { info: "zz66zz" },
   ]);
-  const [tab2, setInfo2] = useState([
-    "inside of tab 1",
-    "a lot of strings",
-    "resides",
-  ]);
-  const [tab3, setInfo3] = useState([
-    "inside of tab 1",
-    "a lot of strings",
-    "resides",
-  ]);
+  const [current, setCurrent] = useState(1);
 
-  const HandleTabs = () => {};
+  // const HandleTabs = () => {};
 
   return (
     <div className="App">
-      <form>
-        <div className="btnClass mx-5">
+      {tab.map((item, i) => {
+        return (
           <button
-            onClick={(e) => setInfo1(e.target.value)}
-            value={tab1}
+            onClick={(e) => setCurrent(e.target.value)}
+            value={i}
             className="tab1 btn btn-dark mx-10"
           >
-            Tab 1
+            Tab {i + 1}
           </button>
-          <button className="tab2 btn btn-dark mx-10">Tab 2</button>
-          <button className="tab3 btn btn-dark mx-10">Tab 3</button>
-        </div>
-      </form>
+        );
+      })}
+
+      <Tab tab={tab} current={current} />
     </div>
   );
 }
