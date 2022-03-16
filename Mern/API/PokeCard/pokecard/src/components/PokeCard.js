@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const PokeCard = (props) => {
   const [defaultURL, setDefaultURL] = useState("");
   const [shinyURL, setShinyURL] = useState("");
   const [hover, setHover] = useState(false);
-  const onClickHandler = () => {
-    console.log("fetch info");
 
+  useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/" + props.poke)
       .then((data) => data.json())
       .then((res) => {
@@ -15,11 +14,11 @@ const PokeCard = (props) => {
         setShinyURL(res.sprites.front_shiny);
       })
       .catch((err) => console.log(err));
-  };
+  }, [props.poke]);
 
   const flipHover = () => setHover(!hover);
   return (
-    <div>
+    <div className="poke-card">
       <img
         onMouseEnter={flipHover}
         onMouseMove={flipHover}
@@ -27,8 +26,6 @@ const PokeCard = (props) => {
         alt={props.poke}
       />
       {props.poke}
-
-      <button onClick={onClickHandler}>get image</button>
     </div>
   );
 };
