@@ -21,6 +21,9 @@ body {
   background-color: antiquewhite;
   align-items: center;
 }
+.steps > h2 {
+  align-self: flex-end;
+}
 
 .direction {
   font-size: 6.5em;
