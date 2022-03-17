@@ -31,6 +31,14 @@ function App() {
     setTask(completeIndex);
   };
 
+  const onDeleteHandler = (index) => {
+    console.log(index);
+
+    const copyState = [...task];
+    copyState.splice(index, 1);
+    setTask(copyState);
+  };
+
   return (
     <div className="App">
       <div className="todo w-100 d-flex justify-content-evenly">
@@ -57,11 +65,13 @@ function App() {
               key={index}
               list={todo}
               checked={() => onCheck(index)}
+              onDelete={() => {
+                onDeleteHandler(index);
+              }}
             />
           );
         })}
       </div>
-      
     </div>
   );
 }
