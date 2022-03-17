@@ -2,13 +2,18 @@ import React from "react";
 
 const Steps = (props) => {
   return (
-    <div className="steps d-flex justify-content-around">
+    <div
+      onClick={props.onDelete}
+      className="steps d-flex justify-content-around"
+    >
       {props.direction === "right" ? (
         <span className="direction">⏭</span>
       ) : props.direction === "left" ? (
         <span className="direction">⏪</span>
-      ) : (
+      ) : props.direction === "forward" ? (
         <span className="direction">⬆️</span>
+      ) : (
+        <span className="direction"> ⬇️</span>
       )}
 
       <h1>{props.instructions}</h1>
