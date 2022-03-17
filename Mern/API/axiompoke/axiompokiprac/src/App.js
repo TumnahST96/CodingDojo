@@ -8,9 +8,8 @@ function App() {
 
   function handleInput() {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon=807")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=800&offset=0")
       .then((response) => setPokies(response.data.results));
-    
   }
 
   return (
