@@ -10,6 +10,8 @@ import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import Reapeter from "./components/Repeater";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Pokemon from "./components/Pokemon";
+import WordNum from "./components/WordNum";
+import Word from "./components/Word";
 
 function App() {
   const [category, setCategory] = useState("pokemon");
@@ -61,8 +63,23 @@ function App() {
           <Reapeter />
         </Route>
 
-        <Route exact path = "/pokemon/:name">
-          <Pokemon/>
+        <Route exact path="/pokemon/:name">
+          <Pokemon />
+        </Route>
+
+        <Route exact path="/home">
+          <Home />
+        </Route>
+        {/* <Route exact path = "/:number">
+          <DisplayNumber/>
+        </Route> */}
+
+        <Route exact path="/:word">
+          <Word/>
+        </Route>
+
+        <Route exact path="/:word/:color/:bgColor">
+          <WordNum/>
         </Route>
       </Switch>
     </div>

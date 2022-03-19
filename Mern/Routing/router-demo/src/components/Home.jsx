@@ -1,9 +1,7 @@
 import React from "react";
 
-const Home = (props) =>{
-    return (
-        <h1>About home page</h1>
-    )
-}
+const Home = (props) => {
+  return <h1>Welcome Home, Nelly</h1>;
+};
 
-export default Home
+export default Home;
