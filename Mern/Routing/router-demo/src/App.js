@@ -1,21 +1,54 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 
 import Home from "./components/Home";
 import About from "./components/About";
+import "bootstrap/dist/css/bootstrap.css";
 
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import Reapeter from "./components/Repeater";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import Pokemon from "./components/Pokemon";
 
 function App() {
+  const [category, setCategory] = useState("pokemon");
+  const [detail, setDetail] = useState("");
+
+  const history = useHistory();
+
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+
+    console.log("form submitted");
+    history.push(`/${category}/${detail}`);
+  };
+
   return (
-    
-      <div className="App">
-        <h1>router demo</h1>
-        {/* <Link to="/">Home</Link>
-        {"   |   "}
-        <Link to="/about">About</Link>
-      </div> */}
+    <div className="App">
+      <h1>router demo</h1>
+
+      <div className="navBar">
+        <Link to="/repeat/heyitsme/64" className="btn btn-primary btn-lg">
+          test route
+        </Link>
+
+        <form onSubmit={onSubmitHandler}>
+          <select
+            className="form-select w-25 d-inline block "
+            onChange={(event) => setCategory(event.target.value)}
+          >
+            <option>pokemon</option>
+            <option>repeat</option>
+          </select>
+          <input
+            type="text"
+            className="form-select w-25 d-inline block"
+            onChange={(event) => setDetail(event.target.value)}
+          />
+          <input type="submit" className="btn btn-success" />
+        </form>
+      </div>
       <Switch>
         <Route path="/about">
           <About />
@@ -23,11 +56,16 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-      </Switch>
 
-      </div>
-      
-   
+        <Route exact path="/repeat/:word1">
+          <Reapeter />
+        </Route>
+
+        <Route exact path = "/pokemon/:name">
+          <Pokemon/>
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
