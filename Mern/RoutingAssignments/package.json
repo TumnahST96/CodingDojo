@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "error-ex": "github:Qix-/node-error-ex"
+  }
+}
