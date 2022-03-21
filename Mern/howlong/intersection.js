@@ -6,14 +6,14 @@
 //Ex: given [1,1,4,5,8] and [1,1,1,5,6,8] return [1,1,5,8]
 //Ex: given [1,3,5,7,9] and [2,4,6,8,10] return []
 
-const sorting = (numbers)=>{
-    numbers.sort(function(a, b) {
-        return a - b;
-      });
+// const sorting = (numbers)=>{
+//     numbers.sort(function(a, b) {
+//         return a - b;
+//       });
 
-      return numbers;
+//       return numbers;
 
-}
+// }
 
 const getit = (first, sec) =>{
     let temp = []
