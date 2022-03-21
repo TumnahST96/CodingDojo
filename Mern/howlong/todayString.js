@@ -48,6 +48,7 @@ console.log(isPangram("A"));
 const isPerfectPangram = (str) => {
 
     let stored = {}
+    
     for (let c = 65; c <= 90; ++c){
         stored[(String.fromCharCode(c))] = false
     }
