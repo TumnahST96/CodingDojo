@@ -49,11 +49,16 @@ module.exports.updateOne = (req, res) => {
 
 
 }
-// module.exports.addBirth = (req, res) => {
-//     Student.updateOne({_id: req.params._id}, 
-//         {$push: {birthday: {month: {req.body.month}} }})
-//     .then(results => res.json(results))
-//         .catch(err=>res.status(400).json({message:"that didnt go as planned", err}))
+module.exports.addBirth = (req, res) => {
+    const birthday = {
+        month: req.body.month,
+        day: req.body.day,
+        year: req.body.month
+    }
+    Student.updateOne({_id: req.params._id}, 
+        {$set: birthday})
+    .then(results => res.json(results))
+        .catch(err=>res.status(400).json({message:"that didnt go as planned", err}))
 
 
-// }
+}

@@ -4,11 +4,7 @@ const StudentSchema = new mongoose.Schema({
     name: String, 
     home_state: String, 
     lucky_number: Number, 
-    birthday: {
-        month: Number, 
-        day: Number, 
-        year: Number
-    }
+    birthday: Date
 })
 
 const Students = mongoose.model("Student", StudentSchema);
