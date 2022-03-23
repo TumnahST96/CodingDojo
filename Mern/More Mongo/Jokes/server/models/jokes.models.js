@@ -5,7 +5,14 @@ const JokeSchema = new mongoose.Schema({
     setup: {
         type: String,
         required: [true, "you need a joke, bro"],
-        minLength: [10, "you need 10 charavters for a good joke"]
+        minLength: [10, "you need 10 charavters for a good joke"],
+        validate:{
+            validator: (input)=>{
+                return !input.toUpperCase().includes("PROGRAMMER");
+                 
+            },
+            message: "Give me something original"
+        }
     }, 
     punchline: {
         type: String,
