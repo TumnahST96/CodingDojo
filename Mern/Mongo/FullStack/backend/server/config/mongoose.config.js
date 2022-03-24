@@ -1,4 +1,4 @@
-0
+var mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/march_2022_sundae", {
     useNewUrlParser: true,
     useUnifiedTopology: true
