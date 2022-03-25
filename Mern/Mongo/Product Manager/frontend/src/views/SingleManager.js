@@ -38,7 +38,7 @@ const SingleManager = props =>{
             <p>Price: {product.price}</p>
             <p>Little Description: {product.description}</p>
 
-            <Link className="btn btn-info btn-lg m-3" to = {`managers/${_id}/edit`}>Edit</Link>
+            <Link className="btn btn-info btn-lg m-3" to = {`/managers/${_id}/update`}>Edit</Link>
             <button onClick={onDeleteHandler} className="btn btn-danger btn-lg m-3" >Delete</button>
             <Link className="btn btn-primary btn-lg m-3" to = {`/`}>Back</Link>
         </div>

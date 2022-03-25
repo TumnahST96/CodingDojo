@@ -51,7 +51,7 @@ const Main = props =>{
                         <td><Link to={`/managers/${item._id}`}>{item.title}</Link></td>
                             <td>{item.price}</td>
                             <td>{item.description}</td>
-                            <td>edit | <button onClick={()=>onDeleteHandler(item._id, i)} className="btn btn-danger btn-sm">delete</button></td>
+                            <td><Link to={`/managers/${item._id}/update`}>Edit</Link> | <button onClick={()=>onDeleteHandler(item._id, i)} className="btn btn-danger btn-sm">delete</button></td>
                             
                         </tr>
                     })
