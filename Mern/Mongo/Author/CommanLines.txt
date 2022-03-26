@@ -1,0 +1,14 @@
+1. create front end folder with react
+    npx create-react-app frontendfoldername
+
+2. open backend folder and complete building it up fully
+    i. npm init -y
+    ii. npm install mongoose express cors
+
+3. in front end, cd frontendfoldername
+    - npm i react-router-dom@5 axios bootstrap
+
+4. set up folders in backend
+    server.js, server folder -> config, controller, models, routes and files in each of them 
+
+5. 
