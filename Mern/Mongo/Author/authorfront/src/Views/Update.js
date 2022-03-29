@@ -14,8 +14,8 @@ const Update = props => {
                 setName(res.data.name);
             })
             .catch(err =>{
-                console.error(err);
-                setError(err.response.data.err.errors)
+                console.error(err.response);
+                
 
             } )
     }, [_id]);
@@ -33,6 +33,7 @@ const Update = props => {
             } )
             .catch(err =>{
                 console.error(err);
+                setError(err.response.data.err.errors)
                 
 
             } )
