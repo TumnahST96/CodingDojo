@@ -11,4 +11,4 @@
 4. set up folders in backend
     server.js, server folder -> config, controller, models, routes and files in each of them 
 
-5. 
+5. https://www.youtube.com/watch?v=sajx67F43_k
