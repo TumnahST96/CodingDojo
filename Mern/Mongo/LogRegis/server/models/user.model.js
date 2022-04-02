@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
       type: String,
       required: [true, "Last name is required"]
     },
-    usernmae:{
+    username:{
         type: String, 
         required: [true, "username is required"],
         minlength: [5, "miniumum length is 5"]
@@ -41,7 +41,7 @@ const UserSchema = new mongoose.Schema({
     next();
   });
 
-  const bcrypt = require('bcrypt');
+//   const bcrypt = require('bcrypt');
 // this should go after 
     UserSchema.pre('save', function(next) {
     bcrypt.hash(this.password, 10)
@@ -51,3 +51,5 @@ const UserSchema = new mongoose.Schema({
         });
         
     });
+
+module.exports = mongoose.model("User", UserSchema);

@@ -8,7 +8,7 @@ const {secret} = require("../config/jwt");
 
 class UserController {
     register(req, res){
-        const user = new UserController(req.body);
+        const user = new User(req.body);
         user.save()
             .then(()=>{
                 res.cookie("usertoken", jwt.sign({_id:user._id}, secret), {httpOnly:true})
@@ -38,3 +38,4 @@ class UserController {
             .catch(err=> res.json(err))
     }
 }
+module.exports = new UserController();

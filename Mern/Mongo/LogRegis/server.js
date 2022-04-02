@@ -11,5 +11,6 @@ app.use(cors({
 app.use(express.json());
 app.use(cookies());
 require("./server/config/mongoose.config")()
+require("./server/router/user.routes")(app)
 
 app.listen(port, () => console.log('listening on ${port} is how i like it'))
