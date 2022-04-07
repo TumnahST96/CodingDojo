@@ -122,6 +122,11 @@ class SinglyLinkedList {
     temp.next = temp3;
 
     return;
+
+      // while(runner.next.next != null){
+    //   runner = runner.next;
+    //return runner.data
+
   }
 
   /**
@@ -153,7 +158,32 @@ class SinglyLinkedList {
    *    should be inserted in front of.
    * @returns {boolean} To indicate whether the node was pre-pended or not.
    */
-  prepend(newVal, targetVal) {}
+  prepend(newVal, targetVal) {
+    let temp = this.head; 
+    
+    if(this.head==targetVal){
+      temp = newVal;
+      temp.next = this.head;
+      
+    }
+
+    
+    var NewNode = new Node(newVal);
+   
+    while(temp.next!=null){
+      if(temp.next.val==targetVal){
+       
+        NewNode.next = temp.next; 
+        temp.next = NewNode;
+        
+        break;
+      }
+      temp = temp.next;
+      
+    }
+    
+
+  }
 
   removeBack() {
     // let temp = new Node();
@@ -271,4 +301,8 @@ console.log("*********************");
 console.log(list.containsRecursive(325));
 console.log("*********************");
 console.log(list.recursiveMax());
+console.log("*********************");
+console.log("Prepend 5 before 234");
+list.prepend(5,234);
+list.Iterate((value) => console.log(value));
 console.log("*********************");
