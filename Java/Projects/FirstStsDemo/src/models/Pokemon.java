@@ -21,7 +21,9 @@ public class Pokemon {
 		this.fainted = fainted;
 	}
 	
-
+	public void attacks() {
+		System.out.println("I am attacking");
+	}
 	
 
 	public String getName() {

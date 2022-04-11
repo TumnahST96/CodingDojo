@@ -5,11 +5,13 @@ class Node {
   }
 }
 
+
 class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
   }
+ 
 
   IsEmpty() {
     if (!this.head) {
@@ -18,15 +20,17 @@ class SinglyLinkedList {
     return this.head;
   }
   PushBack(value) {
+    console.log(value)
     this.push(value);
   }
 
   PushBackN(arr) {
-    /* Your Code Here */
+    /* Your Code Here 6 7 8 */
 
     for (let i = 0; i < arr.length; i++) this.push(arr[i]);
   }
   push(val) {
+    console.log("values to push", val);
     let temp = new Node(val);
     ///store new value in a temp Node where Node.val is val and node.next is null
     ///then check to see if new value is first value. Head should always have a value. if it doesn't you just recieved first value
@@ -58,7 +62,7 @@ class SinglyLinkedList {
 
     return cur;
   }
-
+  
   Iterate() {
     let temp = this.head;
     while (temp != null) {
@@ -256,53 +260,141 @@ class SinglyLinkedList {
     }
     return this.recursiveMax(runner, maxNode);
   }
+
+  concat(list2) {
+    let temp = list2.head;
+    
+    while (temp != null) {
+      console.log("list 2 value", temp.val);
+      this.PushBack(temp.val)
+      temp = temp.next;
+    }
+  }
+
+/**
+ * Finds the node with the smallest number as data and moves it to the front
+ * of this list.
+ * @returns {SinglyLinkedList} This list.
+ */
+
+moveMinToFront() {
+    let temp = this.head;
+    let min = temp.val;
+    while(temp!=null){
+      if(temp.val<min) min = temp.val;
+
+      temp = temp.next; 
+    }
+    console.log("min is", min)
+    this.removeVal(min);
+    this.insertAtFront(min)
+
+}
+
+// EXTRA
+/**
+ * Splits this list into two lists where the 2nd list starts with the node
+ * that has the given value.
+ * splitOnVal(5) for the list (1=>3=>5=>2=>4) will change list to (1=>3)
+ * and the return value will be a new list containing (5=>2=>4)
+ * @param {any} val The value in the node that the list should be split on.
+ * @returns {SinglyLinkedList} The split list containing the nodes that are
+ *    no longer in this list.
+ */
+splitOnVal(val) {
+  let flag = false; 
+  let list3 = new SinglyLinkedList();
+  let list4 = new SinglyLinkedList();
+  let temp = this.head;
+  while(temp!=null){
+    if(temp.val==val){
+      flag = true;
+    }
+    if(!flag){
+      let v = temp.val;
+      list3.PushBack(v);
+    }
+    else{
+      let v = temp.val;
+      list4.PushBack(v);
+    }
+    temp = temp.next;
+  }
+  console.log("New 1st list")
+  list3.Iterate();
+  console.log("New 2nd list");
+  list4.Iterate();
+}
 }
 let test_data0 = 1230;
 let test_data1 = 123;
 let test_data2 = 234;
 let test_data3 = 345;
 let test_data4 = [111, 222, 333, 444, 555];
+let newList = [1, 2, 3, 4, 5];
 
 /* Create our list */
 let list = new SinglyLinkedList();
+let list2 = new SinglyLinkedList();
+
 /* Insert nodes into the list: */
+list2.PushBackN(newList);
 
 list.PushBack(test_data1);
 list.PushBack(test_data0);
 list.PushBack(test_data2);
 list.PushBack(test_data3);
+list.PushBack(55)
 /* Insert array of nodes into the list: */
+
 list.PushBackN(test_data4);
 list.pop();
 list.insertAtFront(325);
 list.insertAtFront(3);
 /* Iterate our list, so we can see our node values */
 list.Iterate((value) => console.log(value));
-list.removeHead();
-console.log("*********************");
-list.Iterate((value) => console.log(value));
-console.log("*********************");
-console.log(list.average());
-list.secondToLast();
-console.log("*********************");
-list.Iterate((value) => console.log(value));
-console.log("*********************");
-list.removeVal(222);
-console.log("*********************");
-list.Iterate((value) => console.log(value));
-console.log("*********************");
-list.removeBack();
-console.log("*********************");
-list.Iterate((value) => console.log(value));
-console.log("*********************");
+// list.removeHead();
+// console.log("*********************");
+// list.Iterate((value) => console.log(value));
+// console.log("*********************");
+// console.log(list.average());
+// list.secondToLast();
+// console.log("*********************");
+// list.Iterate((value) => console.log(value));
+// console.log("*********************");
+// list.removeVal(222);
+// console.log("*********************");
+// list.Iterate((value) => console.log(value));
+// console.log("*********************");
+// list.removeBack();
+// console.log("*********************");
+// list.Iterate((value) => console.log(value));
+// console.log("*********************");
 
-console.log(list.contains(325));
+// console.log(list.contains(325));
+// console.log("*********************");
+// console.log(list.containsRecursive(325));
+// console.log("*********************");
+// console.log(list.recursiveMax());
+// console.log("*********************");
+// console.log("Prepend 5 before 234");
+// list.prepend(5,234);
+// list.Iterate((value) => console.log(value));
+
+
 console.log("*********************");
-console.log(list.containsRecursive(325));
+list.concat(list2)
+
+list2.Iterate((value) => console.log(value));
 console.log("*********************");
-console.log(list.recursiveMax());
-console.log("*********************");
-console.log("Prepend 5 before 234");
-list.prepend(5,234);
+console.log("first list")
 list.Iterate((value) => console.log(value));
+
 console.log("*********************");
+list.moveMinToFront();
+list.Iterate((value) => console.log(value));
+
+console.log("*********************");
+list.splitOnVal(55);
+
+
