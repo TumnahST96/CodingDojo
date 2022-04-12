@@ -1,7 +1,7 @@
 package Zoo;
 
 public class Mammal {
-	private int energyLevel; 
+	public int energyLevel; 
 	
 	public Mammal() {
 		this.energyLevel = 100;

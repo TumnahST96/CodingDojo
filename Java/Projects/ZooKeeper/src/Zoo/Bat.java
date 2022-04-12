@@ -21,4 +21,6 @@ public class Bat extends Mammal {
 		System.out.println("phooshhh firee on "+num+" towns");
 		this.energyLevel -=num*100;
 	}
+	
+	
 }
