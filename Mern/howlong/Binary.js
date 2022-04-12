@@ -21,6 +21,8 @@ class BST
     IsEmpty()
     {
         /* Your Code Here */
+        if(!this.root) return true;
+        return false; 
     }
 
     /* Time Complexity:  O(N) */
@@ -39,6 +41,30 @@ class BST
     {
         /* Your Code Here */
         /* Call me recursively */
+    }
+
+    Min()
+    {
+        /* Your Code Here */
+        if()
+    }
+
+    Max()
+    {
+        /* Your Code Here */
+    }
+
+    /* Determine whether the given value exists within the tree */
+    Contains(value)
+    {
+        /* Your Code Here */
+    }
+
+    /* Determine whether the given value exists within the tree RECURSIVELY */
+    ContainsRecursive(node,value)
+    {
+        /* Your Code Here */
+        /* Call me recursively! */
     }
 
     /* I'm just here to print your BST In-Order. */

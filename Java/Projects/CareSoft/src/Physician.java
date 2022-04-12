@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Physician extends User implements HIPAACompliantUser  {
 	
@@ -14,10 +14,10 @@ public class Physician extends User implements HIPAACompliantUser  {
 		// TODO Auto-generated constructor stub
 	}
     // TO DO: Implement HIPAACompliantUser!
-    public Physician(ArrayList<String> patientNotes) {
-		super();
-		this.patientNotes = patientNotes;
-	}
+//    public Physician(ArrayList<String> patientNotes) {
+//		super();
+//		this.patientNotes = patientNotes;
+//	}
 	
     public void newPatientNotes(String notes, String patientName, Date date) {
         String report = String.format(
@@ -31,15 +31,32 @@ public class Physician extends User implements HIPAACompliantUser  {
     
 
 	// TO DO: Setters & Getters
+    
 
-	public boolean assignPIN(int pin) {
-		if(pin>=1000 && pin<=9999) return true;
-		return false; 
-	}
+//	public boolean assignPIN(int pin) {
+//		
+//		return false; 
+//	}
 	
 	public boolean accessAuthorized(Integer pin) {
 		if(pin==this.id) return true;
 		
 		else return false; 
 	}
+	@Override
+	public boolean assignPin(int pin) {
+		// TODO Auto-generated method stub
+		if(pin>=1000 && pin<=9999) return true;
+		return false;
+	}
+	
+	
+	public ArrayList<String> getPatientNotes() {
+		return patientNotes;
+	}
+
+	public void setPatientNotes(ArrayList<String> patientNotes) {
+		this.patientNotes = patientNotes;
+	}
+
 }
