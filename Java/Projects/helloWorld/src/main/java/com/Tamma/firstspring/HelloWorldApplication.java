@@ -1,16 +1,18 @@
-package com.codingdojo.daikichi;
+package com.Tamma.firstspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DaikichiApplication {
+@RestController
+public class HelloWorldApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DaikichiApplication.class, args);
+		SpringApplication.run(HelloWorldApplication.class, args);
 	}
+	
+
 
 }
