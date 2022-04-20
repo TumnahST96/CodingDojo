@@ -1,5 +1,7 @@
 package com.Daikichi2.controllers;
 
+import java.util.*;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -13,14 +15,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class RootController {
 	@GetMapping("/")
 	public String index(Model model, HttpSession session) {
-		
-		if(session.getAttribute("numStories")==null) {
-			session.setAttribute("numStories", 0);
+//		session.invalidate();
+		if(session.getAttribute("stories")==null) {
+			
+			
+			session.setAttribute("stories", new ArrayList<String>());
+			
 		}
-		if(session.getAttribute("story")!=null) {
-			model.addAttribute("story", session.getAttribute("story"));
-		}
-		model.addAttribute("numStories", session.getAttribute("numStories"));
 		
 		return "index";
 	}
@@ -53,10 +54,12 @@ public class RootController {
 		if(error>0) return "redirect:/";
 		
 		String story = "they said "+Adjective+" was "+Noun+" and it made me "+verb;
-		session.setAttribute("story", story);
-		Integer numStories = (Integer) session.getAttribute("numStories");
-		session.setAttribute("numStories", numStories+1 );
-		System.out.println(story);
+		
+		ArrayList<String> stories = (ArrayList<String>) session.getAttribute("stories");
+		stories.add(story);
+		session.setAttribute("stories", stories);
+ 		System.out.println("stories " + stories);
+		System.out.println("session story : " + session.getAttribute("stories"));
 		
 		
 		return "redirect:/";

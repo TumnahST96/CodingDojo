@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ page isErrorPage="true" %>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@page isErrorPage="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +13,13 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	<h1>Number of User Submitted Stories: ${numStories}</h1>
-	<h1>${story}</h1>
+	<h1>Number of User Submitted Stories: ${stories.size()}</h1>
+	
+	<c:forEach items = "${ stories }" var = "story">
+		<h1>${story}</h1>
+	</c:forEach>
+	<c:out value="${stories}"></c:out>
+	
 	<form action = "/madlibs" method = "POST">
 		<p class = "err">${verb_error}</p>
 		<input placeholder = "verb" name = "verb"/>
