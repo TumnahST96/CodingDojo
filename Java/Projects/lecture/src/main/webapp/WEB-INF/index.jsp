@@ -16,9 +16,11 @@
 	<h1>Number of User Submitted Stories: ${numStories}</h1>
 	<h1>${story}</h1>
 	<form action = "/madlibs" method = "POST">
-	
+		<p class = "err">${verb_error}</p>
 		<input placeholder = "verb" name = "verb"/>
+		<p class = "err">${Adjective_error}</p>
 		<input placeholder = "Adjective" name = "Adjective"/>
+		<p class = "err">${noun_error}</p>
 		<input placeholder = "Noun" name = "Noun"/>
 	
 		<input type = "submit" value = "Create Mad lib"/>
