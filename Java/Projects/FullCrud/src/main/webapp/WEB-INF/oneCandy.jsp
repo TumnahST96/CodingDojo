@@ -17,11 +17,18 @@
 	<div>
 		<h1></h1>
 		<br>
-		<a href = "/dahsboard"></a>
-		<a href = "/newCandy"></a>
-		<a href = "/oneCandy"></a>
-		<a href = "/updateCandy"></a>
+		<a href = "/dashboard">Dashboard</a>
+		<a href = "/newCandy">New Candy</a>
+		<a href = "/oneCandy">One Candy</a>
+		<a href = "/updateCandy">Update Candy</a>
 	
+	</div>
+	
+	<div>
+		${candy.name}
+		${candy.brand}
+		${candy.price}
+		${candy.rating}
 	</div>
 	
 	

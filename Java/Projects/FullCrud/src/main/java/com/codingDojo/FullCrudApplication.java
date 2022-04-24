@@ -1,4 +1,4 @@
-package com.Daikichi2;
+package com.codingDojo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

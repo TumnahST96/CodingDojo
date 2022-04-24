@@ -17,11 +17,41 @@
 	<div>
 		<h1></h1>
 		<br>
-		<a href = "/dahsboard"></a>
-		<a href = "/newCandy"></a>
-		<a href = "/oneCandy"></a>
-		<a href = "/updateCandy"></a>
+		<a href = "/dashboard">Dashboard</a>
+		<a href = "/newCandy">New Candy</a>
+		<a href = "/oneCandy">One Candy</a>
+		<a href = "/updateCandy">Update Candy</a>
 	
+	</div>
+	
+	<div>
+	  
+	<h1>New Candy Form</h1>
+	<form:form action="/processCandy" method="post" modelAttribute="candy">
+	    <p>
+	        <form:label path="name">Name</form:label>
+	        <form:errors path="name"/>
+	        <form:input path="name"/>
+	    </p>
+	    <p>
+	        <form:label path="brand">Brand</form:label>
+	        <form:errors path="brand"/>
+	        <form:input path="brand"/>
+	    </p>
+	    <p>
+	        <form:label path="price">Price</form:label>
+	        <form:errors path="price"/>
+	        <form:input type = "number" path="price"/>
+	    </p>
+	    <p>
+	        <form:label path="rating">Rating</form:label>
+	        <form:errors path="rating"/>     
+	        <form:input type="number" path="rating"/>
+	    </p>    
+	    <input type="submit" value="Submit"/>
+	</form:form>    
+
+		
 	</div>
 	
 	
