@@ -13,20 +13,19 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	
+	<h1>What Expense will u  change</h1>
 	<div>
 		<h1></h1>
 		<br>
-	<a href = "/dashboard">Dashboard</a>
-		<a href = "/newExpense">New Expense</a>
+		<a href = "/dashboard">Dashboard</a>
+		<a href = "/newCandy">New Candy</a>
 	
 	</div>
 	
 	<div>
-	<h1>Make Changes to ${expense.name} in the form below</h1>
-	<form:form action="/updatingExpense/${expense.id}" method="post" modelAttribute="expense">
-	
-		<input type = "hidden" name = "_method" value = "put"/>
+	  
+	<h1>New Expense Form</h1>
+	<form:form action="/processTravel" method="post" modelAttribute="travel">
 	    <p>
 	        <form:label path="name">Name</form:label>
 	        <form:errors path="name"/>
@@ -48,7 +47,9 @@
 	        <form:input  path="description"/>
 	    </p>    
 	    <input type="submit" value="Submit"/>
-	</form:form>  
+	</form:form>    
+
+		
 	</div>
 	
 	

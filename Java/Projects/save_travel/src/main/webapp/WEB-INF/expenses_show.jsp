@@ -13,6 +13,22 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	<h1>I'm a Template</h1>
+	<h1>Travel expense for ${travel.name} below!</h1>
+	<div>
+		<h1></h1>
+		<br>
+		<a href = "/dashboard">Dashboard</a>
+		<a href = "/newExpense">New Expense</a>
+	</div>
+	
+	<div>
+		${travel.name}
+		${travel.vendor}
+		${travel.price}
+		${travel.description}
+		
+	</div>
+	
+	
 </body>
 </html>
