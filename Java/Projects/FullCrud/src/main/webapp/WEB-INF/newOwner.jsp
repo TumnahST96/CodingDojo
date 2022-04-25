@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	<h1>What Candy will u  bring to the Carnivale</h1>
+	<h1>Make a Candy Owner</h1>
 	<div>
 		<h1></h1>
 		<br>
@@ -27,34 +27,18 @@
 	<div>
 	  
 	<h1>New Candy Form</h1>
-	<form:form action="/processCandy" method="post" modelAttribute="candy">
+	<form:form action="/processOwner" method="post" modelAttribute="owner">
 	    <p>
-	        <form:label path="name">Name</form:label>
-	        <form:errors path="name"/>
-	        <form:input path="name"/>
+	        <form:label path="firstName">First Name</form:label>
+	        <form:errors path="firstName"/>
+	        <form:input path="firstName"/>
 	    </p>
 	    <p>
-	        <form:label path="brand">Brand</form:label>
-	        <form:errors path="brand"/>
-	        <form:input path="brand"/>
+	        <form:label path="lastName">Last Name</form:label>
+	        <form:errors path="lastName"/>
+	        <form:input path="lastName"/>
 	    </p>
-	    <p>
-	        <form:label path="price">Price</form:label>
-	        <form:errors path="price"/>
-	        <form:input type = "number" path="price"/>
-	    </p>
-	    <p>
-	        <form:label path="rating">Rating</form:label>
-	        <form:errors path="rating"/>     
-	        <form:input type="number" path="rating"/>
-	    </p>
-	    <form:select path = "owner">
-	    	<c:forEach var = "i" items = "${allOwner}">
-	    		<form:option value="${i.id }">${i.firstName} ${i.lastName}</form:option>
-	    	</c:forEach>
-	    	
-	    </form:select>   
-	     
+	        
 	    <input type="submit" value="Submit"/>
 	</form:form>    
 

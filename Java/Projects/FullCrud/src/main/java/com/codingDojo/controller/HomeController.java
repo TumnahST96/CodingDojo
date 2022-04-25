@@ -13,15 +13,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.codingDojo.model.Candy;
+import com.codingDojo.model.Owner;
 import com.codingDojo.services.CandyService;
+import com.codingDojo.services.OwnerService;
 
 @Controller
 public class HomeController {
 
 	//Injecting our candyservice
 	private final CandyService candyServ;
-	public HomeController(CandyService CS) {
+	private final OwnerService ownerServe;
+	
+	
+	public HomeController(CandyService CS, OwnerService ownerServe) {
 		this.candyServ = CS;
+		this.ownerServe = ownerServe;
 	}
 	
 	//route to show all candies
@@ -41,12 +47,12 @@ public class HomeController {
 	
 	//render the new candy form ----databinding
 	@GetMapping("/newCandy")
-	public String newCandyForm(@ModelAttribute("candy")Candy candy) {
-		
+	public String newCandyForm(@ModelAttribute("candy")Candy candy, Model model) {
+		model.addAttribute("allOwner", ownerServe.allOwners());
 		return "newCandy";
 	}
 	
-
+	
 	
 	//process the post to create candy
 	@PostMapping("/processCandy")
@@ -61,6 +67,27 @@ public class HomeController {
 		
 		return "redirect:dashboard";
 	}
+	
+	//route to render owner form
+		@GetMapping("/newOwner")
+		public String newOwnerForm(@ModelAttribute("owner")Owner owner) {
+			return "newOwner";
+		}
+		//process the post to create candy
+		@PostMapping("/processOwner")
+		public String postingOwner(@Valid @ModelAttribute("owner")Owner owner, BindingResult result) {
+			
+			if(result.hasErrors()) return "newOwner";
+			
+			else {
+				ownerServe.createOwner(owner);
+			}
+			
+			
+			return "redirect:dashboard";
+		}
+		
+
 	
 	
 	//Route to show one candy

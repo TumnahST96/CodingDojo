@@ -32,6 +32,8 @@
 		<a href = "/newCandy">New Candy</a>
 		<a href = "/oneCandy">One Candy</a>
 		<a href = "/updateCandy">Update Candy</a>
+		<a class="btn btn-info" href = "/newOwner">Make an Owner</a>
+		
 		
 		
 		<div >
@@ -43,6 +45,7 @@
 						<th class = "align-middle">Price</th>
 						<th class = "align-middle">Rating</th>
 						<th class = "align-middle">Actions</th>
+						<th class = "align-middle">Owner</th>
 					</tr>
 				</thead>
 				
@@ -60,6 +63,7 @@
 								<a class = "btn btn-success" href="/updateCandy/${i.id}">Update</a> 
 								<a class="btn btn-danger" href="/delete/${i.id}">Delete</a> 
 							</td>
+							<td><p><c:out value = "${i.owner.firstName} ${i.owner.lastName}"></c:out></p></td>
 						</tr>
 					</c:forEach>
 				</tbody>
