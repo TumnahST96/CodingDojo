@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -24,57 +23,31 @@
 </head>
 <body>
     <div class="container"> <!-- Beginning of Container -->
+        <h1>Ninjas for ${dojo.name}</h1>
         
-	<div>
-		<h1>Welcome to Fullcrud</h1>
-		<br>
-		<a href = "/dashboard">Dashboard</a>
-		<a href = "/newCandy">New Candy</a>
-		<a href = "/oneCandy">One Candy</a>
-		<a href = "/updateCandy">Update Candy</a>
-		
-		<a class="btn btn-info" href = "/newOwner">Make an Owner</a>
-		<a href = "/logout">Logout</a>
-		
-		
-		
-		<div >
+        
+    </div> <!-- End of Container -->
+    
+    <div >
 			<table class = "table table-dark table-striped table-hover">
 				<thead>
 					<tr>
 						<th class = "align-middle">Name</th>
-						<th class = "align-middle">Brand</th>
-						<th class = "align-middle">Price</th>
-						<th class = "align-middle">Rating</th>
-						<th class = "align-middle">Actions</th>
-						<th class = "align-middle">Owner</th>
 					</tr>
 				</thead>
 				
 				<tbody>
-					<c:forEach var = "i" items = "${allCands }">
+					<c:forEach var = "i" items = "${allDojo }">
 						<tr>
-							<td><p> <a href="/oneCandy/${i.id }">
+							<td><p> <a href="/oneDojo/${i.id }">
 							<c:out value = "${i.name }"></c:out></a>
 							</p></td>
 							
-							<td><p> <c:out value = "${i.brand }"></c:out></p></td>
-							<td><p> <c:out value = "${i.price }"></c:out></p></td>
-							<td><p> <c:out value = "${i.rating}"></c:out></p></td>
-							<td>
-								<a class = "btn btn-success" href="/updateCandy/${i.id}">Update</a> 
-								<a class="btn btn-danger" href="/delete/${i.id}">Delete</a> 
-							</td>
-							<td><p><c:out value = "${i.owner.firstName} ${i.owner.lastName}"></c:out></p></td>
+							
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
 		</div>
-		
-	
-	</div>
-	
-    </div> <!-- End of Container -->
 </body>
 </html>

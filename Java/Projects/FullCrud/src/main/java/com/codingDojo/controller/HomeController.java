@@ -1,5 +1,6 @@
 package com.codingDojo.controller;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -13,9 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.codingDojo.model.Candy;
+import com.codingDojo.model.LoginUser;
 import com.codingDojo.model.Owner;
+import com.codingDojo.model.User;
 import com.codingDojo.services.CandyService;
 import com.codingDojo.services.OwnerService;
+import com.codingDojo.services.UserService;
 
 @Controller
 public class HomeController {
@@ -23,12 +27,72 @@ public class HomeController {
 	//Injecting our candyservice
 	private final CandyService candyServ;
 	private final OwnerService ownerServe;
+	private final UserService userServe;
 	
 	
-	public HomeController(CandyService CS, OwnerService ownerServe) {
+	public HomeController(CandyService CS, OwnerService ownerServe, UserService userServe) {
 		this.candyServ = CS;
 		this.ownerServe = ownerServe;
+		this.userServe = userServe; 
 	}
+	
+	
+	@GetMapping("/")
+    public String index(Model model) {
+    
+        // Bind empty User and LoginUser objects to the JSP
+        // to capture the form input
+        model.addAttribute("newUser", new User());
+        model.addAttribute("newLogin", new LoginUser());
+        return "index";
+    }
+	
+	 @PostMapping("/register")
+	    public String register(@Valid @ModelAttribute("newUser") User newUser, 
+	            BindingResult result, Model model, HttpSession session) {
+	        
+	        // TO-DO Later -- call a register method in the service 
+	        // to do some extra validations and create a new user!
+	        userServe.register(newUser, result);
+	        if(result.hasErrors()) {
+	            // Be sure to send in the empty LoginUser before 
+	            // re-rendering the page.
+	            model.addAttribute("newLogin", new LoginUser());
+	            return "index";
+	        }
+	        
+	        // No errors! 
+	        // TO-DO Later: Store their ID from the DB in session, 
+	        // in other words, log them in.
+	        session.setAttribute("user_id", newUser.getId());
+	    
+	        return "redirect:/dashboard";
+	    }
+	    
+	    @PostMapping("/login")
+	    public String login(@Valid @ModelAttribute("newLogin") LoginUser newLogin, 
+	            BindingResult result, Model model, HttpSession session) {
+	        
+	        // Add once service is implemented:
+	        User user = userServe.login(newLogin, result);
+	    
+	        if(result.hasErrors()) {
+	            model.addAttribute("newUser", new User());
+	            return "index";
+	        }
+	    
+	        // No errors! 
+	        // TO-DO Later: Store their ID from the DB in session, 
+	        // in other words, log them in.
+	        session.setAttribute("user_id", user.getId() );
+	        return "redirect:/dashboard";
+	    }
+	    
+	    @GetMapping("/logout")
+	    public String logout(HttpSession session) {
+	    	session.invalidate();
+	    	return "redirect:/";
+	    }
 	
 	//route to show all candies
 	@GetMapping("/dashboard")
