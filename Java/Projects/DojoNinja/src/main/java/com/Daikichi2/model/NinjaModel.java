@@ -25,11 +25,11 @@ public class NinjaModel {
 	
 	@NotNull
 	@Size(min = 3, max=30)
-	private String FirstName; 
+	private String firstName; 
 	
 	@NotNull
 	@Size(min = 3, max=30)
-	private String LastName; 
+	private String lastName; 
 	
 	@NotNull
 	@Min(1)
@@ -52,8 +52,8 @@ public class NinjaModel {
 	public NinjaModel(@NotNull @Size(min = 3, max = 30) String firstName,
 			@NotNull @Size(min = 3, max = 30) String lastName, @NotNull @Min(1) @Max(80) Integer age) {
 		
-		this.FirstName = firstName;
-		this.LastName = lastName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.age = age;
 	}
 	
@@ -65,8 +65,8 @@ public class NinjaModel {
 	public NinjaModel(@NotNull @Size(min = 3, max = 30) String firstName,
 			@NotNull @Size(min = 3, max = 30) String lastName, @NotNull @Min(1) @Max(10) Integer age, DojoModel dojo) {
 		super();
-		FirstName = firstName;
-		LastName = lastName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.age = age;
 		this.dojo = dojo;
 	}
@@ -98,25 +98,25 @@ public class NinjaModel {
 
 
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
 
 
 
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
 
 
 
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 
 
 
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 
 

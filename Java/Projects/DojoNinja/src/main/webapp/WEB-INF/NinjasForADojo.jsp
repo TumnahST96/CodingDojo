@@ -32,16 +32,21 @@
 			<table class = "table table-dark table-striped table-hover">
 				<thead>
 					<tr>
-						<th class = "align-middle">Name</th>
+						<th class = "align-middle">First Name</th>
+						<th class = "align-middle">Last Name</th>
 					</tr>
 				</thead>
 				
 				<tbody>
-					<c:forEach var = "i" items = "${allDojo }">
+					<c:forEach var = "i" items = "${dojo.ninjas }">
 						<tr>
 							<td><p> <a href="/oneDojo/${i.id }">
-							<c:out value = "${i.name }"></c:out></a>
+							<c:out value = "${i.firstName }"></c:out></a>
 							</p></td>
+							
+							<td>
+							<c:out value = "${i.lastName }"></c:out>
+							</td>
 							
 							
 						</tr>
