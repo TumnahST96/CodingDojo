@@ -34,6 +34,7 @@
 					<tr>
 						<th class = "align-middle">First Name</th>
 						<th class = "align-middle">Last Name</th>
+						<th class = "align-middle">Age</th>
 					</tr>
 				</thead>
 				
@@ -46,6 +47,10 @@
 							
 							<td>
 							<c:out value = "${i.lastName }"></c:out>
+							</td>
+							
+							<td>
+							<c:out value = "${i.age }"></c:out>
 							</td>
 							
 							
