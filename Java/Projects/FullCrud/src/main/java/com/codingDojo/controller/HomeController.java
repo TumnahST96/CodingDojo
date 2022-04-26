@@ -47,6 +47,13 @@ public class HomeController {
         return "index";
     }
 	
+	
+	
+	//login reg stuff
+	
+	
+	
+	
 	 @PostMapping("/register")
 	    public String register(@Valid @ModelAttribute("newUser") User newUser, 
 	            BindingResult result, Model model, HttpSession session) {
@@ -93,6 +100,12 @@ public class HomeController {
 	    	session.invalidate();
 	    	return "redirect:/";
 	    }
+	    
+	    
+	    ///
+	    
+	    
+	    //all candy stuff
 	
 	//route to show all candies
 	@GetMapping("/dashboard")
